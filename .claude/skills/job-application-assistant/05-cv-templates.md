@@ -115,12 +115,14 @@ When the role sits outside your home domain, **lead with the domain-transfer arg
 
 **Create 2-3 profile statement templates for your main role types:**
 
-<!-- SETUP: These are populated based on your background -->
-**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
+**For Full-Stack Developer / Software Developer roles:**
+> Full-stack developer specializing in TypeScript, React/Next.js, and Node.js/Express, with hands-on production experience owning the complete lifecycle of a live event management platform. Combines front-end precision with cloud infrastructure fluency — provisioning Azure and AWS environments with Terraform, containerizing workloads with Docker and Kubernetes, and managing CI/CD pipelines end-to-end. Graduated Magna Cum Laude from Algonquin College (GPA 3.7) and holds the Microsoft Azure Fundamentals certification. Proven ability to deliver clean, well-documented solutions at pace using AI-assisted development workflows including Claude Code.
 
-**For [YOUR_SECONDARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
+**For Cloud / DevOps / Platform Engineer roles:**
+> Cloud and DevOps engineer with a strong foundation in Azure infrastructure, Terraform IaC, and Kubernetes — demonstrated through a self-directed 19-post technical blog and a production deployment on Vercel/Render backed by AKS, GitHub Actions, and Azure Monitor. Holds Microsoft Azure Fundamentals (AZ-900) certification. Brings full-stack TypeScript/Node.js development fluency alongside DevOps tooling depth (Docker, Helm, Argo CD, Prometheus/Grafana, SonarQube, Trivy), enabling end-to-end ownership from code commit to production observability. Graduated Magna Cum Laude from Algonquin College.
+
+**For Production Support / SRE / Technical Support Engineer roles:**
+> Detail-oriented engineer with a background in high-volume technical incident resolution (1,000+ cases at 95% SLA at Amazon) combined with modern cloud and full-stack development skills. Built production infrastructure with Terraform, Docker, and Azure; implemented monitoring with Prometheus and Grafana; authored runbooks and SOPs adopted org-wide. Combines the methodical troubleshooting instincts of a support engineer with the build skills of a developer — able to diagnose, fix, and prevent issues across the full stack.
 
 Statements labeled *[Used for: <company>_<role>]* were extracted from archived application drafts by `/setup` Path A. They are **phrasing references, never fact sources**: when drafting from one, every factual claim still comes from `01-candidate-profile.md` - a past tailored draft does not vouch for its own accuracy.
 

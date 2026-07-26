@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(job-scraper)",
+      "WebFetch(domain:jobs.hanzilla.co)",
+      "WebFetch(domain:bebee.com)",
+      "WebFetch(domain:dailyremote.com)",
+      "WebSearch",
+      "Bash(lualatex -interaction=nonstopmode main_trendai_junior-web-developer.tex)"
+    ]
+  }
+}

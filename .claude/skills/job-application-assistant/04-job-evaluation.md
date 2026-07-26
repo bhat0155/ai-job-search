@@ -44,9 +44,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** JavaScript/TypeScript, Node.js/Express, React/Next.js, Azure Cloud (AKS, App Service, Azure DevOps, Azure Monitor), Terraform IaC, Docker/Kubernetes, GitHub Actions CI/CD, PostgreSQL/Prisma, REST API design, JWT/OAuth 2.0
+**Moderate match areas:** C#/.NET, AWS (S3/EC2), Python (scripting/automation), Bash, Helm, Argo CD/GitOps, SonarQube, Prometheus/Grafana, n8n automation
+**Weak match areas:** Java, Go, C++, Ruby, production ML/data science, mobile native (iOS/Android), Rust, advanced ML frameworks (PyTorch/TensorFlow production)
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for?
@@ -58,9 +58,9 @@ Does work history align with what they're looking for?
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** Full-stack web development (Next.js/Node.js/React), cloud infrastructure provisioning (Terraform/Azure), CI/CD pipeline setup, production incident response (Amazon SLA background), technical documentation/runbooks
+**Moderate:** DevOps engineering (strong tooling knowledge but <1yr professional title), SRE/platform engineering concepts (Prometheus/Grafana, on-call), backend API development (C#/.NET)
+**Entry-level/Stretch:** Pure mobile development, data science/ML engineering, enterprise Java development, solutions architecture (junior level only)
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -75,9 +75,11 @@ Does the role and company culture match the behavioral profile?
 **Red flags to research:** Department disorganization, work dominated by maintenance over development, poor chemistry with leadership, culture mismatches. Check reviews, media coverage, LinkedIn connections, and network contacts for insider perspective.
 
 ### 4. Location & Logistics (Pass/Fail + Notes)
-- Within commute range: PASS
-- Remote with occasional office: PASS
-- Requires relocation: FAIL (deal-breaker)
+- Ottawa/Gatineau/Kanata area (on-site, hybrid, remote): PASS
+- Remote anywhere in Canada: PASS
+- Toronto or other Canadian cities (hybrid/on-site with relocation): PASS — open to relocation
+- US-only roles: FAIL (no work authorization)
+- Requires professional French proficiency: FAIL (conversational only)
 - Frequent international travel: FLAG (discuss with user)
 
 ### 5. Career Alignment & Motivation (0-100)
@@ -91,19 +93,19 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+- Land a full-time junior/associate software developer or cloud/DevOps engineer role with a real team and mentorship (immediate)
+- Build 2–3 years of production experience across the JS/TS/Azure stack to qualify for mid-level roles
+- Long-term: technical lead or solutions architect path in cloud-native or platform engineering
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
-- Non-task factors: leadership style, department culture, company values, degree of autonomy
+- Tasks that energize: building production systems end-to-end, infrastructure automation, solving root-cause problems, writing technical documentation, learning new cloud/DevOps patterns
+- Tasks that drain: pure ticket maintenance with no ownership, repetitive QA with no engineering component, heavily siloed work with no exposure to the full stack
+- Non-task factors: mentoring manager, team that ships regularly, culture that values curiosity
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+- **Security**: Employed part-time; needs full-time salary in CAD 60,000–90,000 range
+- **Flexibility**: Can start within 2–4 weeks notice; open to Canada-wide relocation
+- **Professional development**: Strongly prefers roles with real code/cloud ownership over support-only roles; AZ-900 is the baseline — wants continued cloud cert path (AZ-104, AZ-400)
 
 ### 6. Salary Benchmark (Optional)
 

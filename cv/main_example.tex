@@ -1,8 +1,7 @@
-%% Example CV - [YOUR_NAME]
+%% Master CV — Ekam Bhatia
 %% Comprehensive overview of all competencies, experience, and achievements.
 %% Use as a master reference when tailoring role-specific CVs.
 %%
-%% SETUP: Run /setup to populate this with your actual information.
 %% Compile with: lualatex main_example.tex
 %% (pdflatex often fails on modern MiKTeX with fontawesome5 font-expansion errors.)
 
@@ -11,8 +10,7 @@
 \moderncvcolor{blue}
 
 % Force both first and last name AND section headings to render in moderncv
-% blue (color1). Default banking on lualatex+MiKTeX leaves these black, which
-% looks inconsistent with the rest of the blue accent scheme.
+% blue (color1). Default banking on lualatex+MiKTeX leaves these black.
 \renewcommand*{\firstnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
 \renewcommand*{\lastnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
 \renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}
@@ -24,18 +22,19 @@
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={Ekam Bhatia - CV},
     pdfpagemode=FullScreen,
 }
-\usepackage[scale=0.80]{geometry}
+\usepackage[scale=0.77]{geometry}
+\usepackage{needspace}
 \usepackage{import}
 
-% personal data
-\name{[First]}{[Last]}
-\address{[Your Address, City, Country]}{}{}
-\phone[mobile]{[+XX XXXXXXXXXX]}
-\email{[your.email@example.com]}
-\extrainfo{\href{[https://linkedin.com/in/your-profile]}{LinkedIn}, \href{[https://github.com/your-username]}{GitHub}}
+% Personal data
+\name{Ekam}{Bhatia}
+\address{Ottawa, Ontario, Canada}{}{}
+\phone[mobile]{(343) 558-8750}
+\email{ekamsingh643@gmail.com}
+\extrainfo{\href{https://linkedin.com/in/ekam-bhatia-335840168}{LinkedIn} ~|~ \href{https://github.com/bhat0155}{GitHub} ~|~ \href{https://ekamsingh.ca}{ekamsingh.ca} ~|~ \href{https://ekamblogs.ca}{ekamblogs.ca}}
 
 \begin{document}
 
@@ -46,7 +45,7 @@
 % ============================================================
 
 \vspace{6pt}
-\small{[Write a 3-5 line profile statement tailored to the role you're applying for. Focus on what makes you uniquely qualified. Example: "Data scientist with a PhD in [field] and X years of industry experience. Combines deep domain expertise in [domain] with strong applied machine learning and Python development skills. Experienced in developing end-to-end ML pipelines, from data ingestion to stakeholder-facing dashboards."]}
+\small{Full-stack developer specializing in TypeScript, React/Next.js, and Node.js, with hands-on production experience owning the complete lifecycle of a live event management platform. Combines front-end precision with cloud infrastructure fluency — provisioning Azure and AWS environments with Terraform, containerizing workloads with Docker and Kubernetes, and managing CI/CD pipelines end-to-end. Graduated Magna Cum Laude from Algonquin College (GPA~3.7) and holds the Microsoft Azure Fundamentals (AZ-900) certification. Proven ability to deliver clean, well-documented solutions at pace using AI-assisted development workflows including Claude Code.}
 
 % ============================================================
 %     CORE COMPETENCIES
@@ -56,15 +55,15 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item \textbf{[Skill Category 1]}: [Specific skills, frameworks, tools. Be concrete.]
+\item \textbf{Full-Stack Web Development}: TypeScript, JavaScript, React, Next.js, Node.js, Express; REST API design; PostgreSQL/Prisma, MongoDB, Redis; JWT \& OAuth 2.0; Zod validation
 
-\item \textbf{[Skill Category 2]}: [Specific skills, frameworks, tools.]
+\item \textbf{Cloud \& Infrastructure (Azure)}: Azure Kubernetes Service (AKS), App Service, Azure DevOps, Azure Functions, Azure Monitor, Log Analytics, Key Vault, RBAC, Azure Policy, ACR, VNet; Microsoft Azure Fundamentals (AZ-900) certified
 
-\item \textbf{[Skill Category 3]}: [Specific skills, frameworks, tools.]
+\item \textbf{DevOps \& CI/CD}: Terraform IaC (remote state, modules, OIDC), Docker, Kubernetes, Helm; GitHub Actions, Azure DevOps Pipelines, Jenkins, Argo CD/GitOps; SonarQube \& Trivy security scanning
 
-\item \textbf{[Skill Category 4]}: [Domain expertise, methods, approaches.]
+\item \textbf{Observability \& Reliability}: Prometheus, Grafana, Azure Monitor; incident response, SLA management, root-cause analysis; SOP and runbook authoring
 
-\item \textbf{[Skill Category 5]}: [Tools, platforms, software.]
+\item \textbf{AWS \& Additional Tools}: AWS S3 (presigned URLs, bucket policies), EC2; C\#/.NET backend development; Python scripting; Bash; n8n workflow automation; AI-assisted development (Claude Code)
 
 \end{itemize}
 
@@ -76,32 +75,33 @@
 \vspace{3pt}
 \begin{itemize}
 
-% --- Most Recent Role ---
-\item{\cventry{[YYYY--Present]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\needspace{5\baselineskip}
+\item{\cventry{Aug 2025 -- Present}{Full-Stack / Cloud Developer (Freelance)}{bhangrascape.ca}{Remote, Ottawa, ON}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1 - be specific, use numbers where possible]
-    \item [Achievement or responsibility 2]
-    \item [Achievement or responsibility 3]
-    \item [Achievement or responsibility 4]
+    \item Built and deployed a full-stack event management platform (Next.js, Node.js, PostgreSQL) for a 20+ member group, owning the full lifecycle from design to production
+    \item Architected secure media ingestion via AWS S3 presigned URLs, offloading file handling from the API server and reducing upload latency
+    \item Implemented JWT authentication, Google OAuth, role-based access control (RBAC), and Zod schema validation; managed CI/CD deployments across Vercel and Render
+    \item Provisioned all cloud infrastructure with Terraform (Azure \& AWS); containerized application workloads with Docker and Kubernetes
+    \item \textbf{Tech:} TypeScript, Next.js, React, Node.js, Express, PostgreSQL, Prisma, AWS S3, Azure, Terraform, Docker, Kubernetes, GitHub Actions
 \end{itemize}}}
 
 \vspace{3pt}
 
-% --- Previous Role ---
-\item{\cventry{[YYYY--YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\needspace{5\baselineskip}
+\item{\cventry{Oct 2020 -- Nov 2022}{Technical Support Associate}{Amazon}{Remote (Gurugram, India)}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1]
-    \item [Achievement or responsibility 2]
-    \item [Achievement or responsibility 3]
+    \item Resolved 1,000+ complex technical and operational issues at a 95\% resolution rate against strict SLA targets
+    \item Authored SOPs and runbooks adopted by 10+ new hires, cutting team onboarding time by 20\%
+    \item Applied systematic root-cause analysis to reduce repeat escalations across high-volume support queues
 \end{itemize}}}
 
 \vspace{3pt}
 
-% --- Earlier Role ---
-\item{\cventry{[YYYY--YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\needspace{5\baselineskip}
+\item{\cventry{Aug 2023 -- Dec 2023}{Warehouse Clerk (Co-op)}{The Beer Store}{Ottawa, ON}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1]
-    \item [Achievement or responsibility 2]
+    \item Maintained 98\% inventory accuracy across daily warehouse operations
+    \item Streamlined cross-dock processing procedures, reducing processing time by 15\%
 \end{itemize}}}
 
 \end{itemize}
@@ -114,16 +114,31 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item{\cventry{[YYYY--YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-Thesis: ``[Thesis Title].'' [Brief description of research focus.]
+\needspace{5\baselineskip}
+\item{\cventry{Jan 2024 -- Aug 2025}{Advanced Diploma, Mobile Application Design \& Development}{Algonquin College}{Ottawa, ON}{}{\vspace{1pt}
+Graduated \textbf{Magna Cum Laude}, GPA 3.7/4.0. Coursework: full-stack development, cloud integration, mobile application design, software engineering principles.
 }}
 
-\vspace{3pt}
+\end{itemize}
 
-\item{\cventry{[YYYY--YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-[Brief description or key topics.]
-}}
+% ============================================================
+%     CERTIFICATIONS
+% ============================================================
 
+\section{Certifications}
+\vspace{1pt}
+\begin{itemize}
+\item \textbf{Microsoft Certified: Azure Fundamentals (AZ-900)} -- Microsoft (2026)
+\end{itemize}
+
+% ============================================================
+%     TECHNICAL BLOG / PUBLICATIONS
+% ============================================================
+
+\section{Technical Blog}
+\vspace{1pt}
+\begin{itemize}
+\item \href{https://ekamblogs.ca}{\textbf{ekamblogs.ca}} -- 19 self-published posts (2024--2025) covering Terraform/Azure IaC (AKS, ACR, App Service, PostgreSQL, VNet, Azure Policy, OIDC CI/CD), Jenkins + SonarQube/Trivy, .NET+React on Azure DevOps, Docker/Kubernetes with Prometheus/Grafana, Azure Functions, n8n automation, and DNS.
 \end{itemize}
 
 % ============================================================
@@ -133,27 +148,17 @@ Thesis: ``[Thesis Title].'' [Brief description of research focus.]
 \section{Languages}
 \vspace{1pt}
 \begin{itemize}
-\item [Language 1] (native), [Language 2] (fluent), [Language 3] (intermediate).
+\item English (fluent/professional), French (intermediate/conversational), Hindi \& Punjabi (fluent).
 \end{itemize}
 
 % ============================================================
-%     PUBLICATIONS (optional)
-% ============================================================
-
-\section{Publications}
-\vspace{1pt}
-\begin{itemize}
-\item [Author(s)] ([Year]). [Title]. [Journal/Conference]. \href{[DOI_URL]}{DOI link}
-\end{itemize}
-
-% ============================================================
-%     HONORS AND AWARDS (optional)
+%     HONORS AND AWARDS
 % ============================================================
 
 \section{Honors and Awards}
 \vspace{1pt}
 \begin{itemize}
-\item{\textbf{[Award Name]} -- [Event/Organization] ([Year]).}
+\item{\textbf{Magna Cum Laude} -- Algonquin College (2025). GPA 3.7/4.0.}
 \end{itemize}
 
 % ============================================================

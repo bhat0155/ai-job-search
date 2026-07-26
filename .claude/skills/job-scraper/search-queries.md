@@ -1,81 +1,131 @@
-# Search Queries for Job Scraper
+# Search Queries for Job Scraper — Ekam Bhatia
 
-<!-- SETUP: Customize these queries based on your skills, target roles, and location -->
+<!-- Canada-focused job search: Ottawa, remote Canada, and Toronto -->
 
 ## Installed portal CLIs (primary for `/scrape`)
 
-`/scrape` discovers every portal skill under `.agents/skills/*/SKILL.md` and runs its CLI first. Shipped country-agnostic CLIs include `linkedin-search` and `freehire-search`; Danish demos and any skill you add with `/add-portal` are included the same way. You do **not** need a matching `site:` line below for those CLIs to run.
-
-The `site:` query templates in this file are the **WebSearch fallback** — for portals without a CLI, company career pages, or when a CLI fails.
+`/scrape` discovers every portal skill under `.agents/skills/*/SKILL.md` and runs its CLI first.
+Country-agnostic CLIs: `linkedin-search`, `freehire-search`.
+The `site:` query templates below are the **WebSearch fallback** for portals without a CLI, company career pages, or when a CLI fails.
 
 ## Search Sites
 
-Primary (your market's job boards - scaffold one with `/add-portal`):
-- **[YOUR_JOB_BOARD]** - your market's largest general job board
-- **linkedin.com/jobs** - LinkedIn job listings (filter: [YOUR_COUNTRY] / [YOUR_CITY]); also covered by `linkedin-search` CLI
-- **[YOUR_INDUSTRY_JOB_BOARD]** - a niche/industry board for your field (optional)
-- **[YOUR_ADDITIONAL_JOB_BOARD]** - another major board for your market (optional)
+Primary (Canadian job boards):
+- **ca.indeed.com** - Canada's largest general job board
+- **linkedin.com/jobs** - LinkedIn job listings (filter: Canada / Ottawa / remote); also covered by `linkedin-search` CLI
+- **jobbank.gc.ca** - Government of Canada Job Bank (federal, public sector, and private)
+- **workopolis.com** - Canadian job board
 
 Secondary (company career pages via Google):
-- Direct Google searches with `site:` filters for known target companies
+- Direct `site:` searches for specific target companies
 
 ## Query Categories
 
-Queries are grouped by priority. Each query should be combined with your location terms (e.g. your city, region, or metro area) where the site supports it.
+### Priority 1: Full-Stack / Software Developer (Strongest fit)
 
-### Priority 1: [YOUR_PRIMARY_ROLE_TYPE]
-
-These match your strongest and most desired career direction.
+These match the core JS/TS/React/Node.js stack and are the most likely to land interviews.
 
 ```
-site:[YOUR_JOB_BOARD] "[YOUR_PRIMARY_JOB_TITLE]" [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "[YOUR_KEY_SKILL]" [YOUR_CITY]
-site:linkedin.com/jobs "[YOUR_PRIMARY_JOB_TITLE]" [YOUR_COUNTRY]
+site:ca.indeed.com "software developer" "TypeScript" Ottawa
+site:ca.indeed.com "full-stack developer" "React" Ottawa
+site:ca.indeed.com "full-stack developer" "Node.js" Canada remote
+site:ca.indeed.com "junior software developer" "TypeScript" Canada
+site:linkedin.com/jobs "software developer" TypeScript Ottawa Canada
+site:linkedin.com/jobs "full-stack developer" React "Node.js" Canada
+site:linkedin.com/jobs "associate software developer" TypeScript Canada
+site:jobbank.gc.ca "software developer" "JavaScript" Ottawa
 ```
 
-### Priority 2: [YOUR_DOMAIN_EXPERTISE]
+### Priority 2: Cloud / DevOps / Platform Engineer (Strong differentiator)
 
-These match your domain expertise.
-
-```
-site:[YOUR_JOB_BOARD] [YOUR_DOMAIN_KEYWORD_1] [YOUR_CITY] OR [YOUR_REGION]
-site:[YOUR_JOB_BOARD] [YOUR_DOMAIN_KEYWORD_2] [YOUR_COUNTRY]
-site:linkedin.com/jobs [YOUR_DOMAIN_KEYWORD_1] [YOUR_CITY] [YOUR_COUNTRY]
-```
-
-### Priority 3: [YOUR_ADJACENT_ROLE_TYPE]
-
-Adjacent roles you could pivot into.
+Ekam's Azure + Terraform + Kubernetes depth makes him competitive at junior/associate level.
 
 ```
-site:[YOUR_JOB_BOARD] "[YOUR_ADJACENT_TITLE_1]" [YOUR_KEY_SKILL] [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "[YOUR_ADJACENT_TITLE_2]" [YOUR_KEY_SKILL] [YOUR_CITY]
+site:ca.indeed.com "cloud engineer" "Azure" Ottawa Canada
+site:ca.indeed.com "DevOps engineer" "Terraform" Canada
+site:ca.indeed.com "junior DevOps" "Azure" Canada
+site:ca.indeed.com "platform engineer" "Kubernetes" Canada remote
+site:linkedin.com/jobs "cloud engineer" Azure Terraform Canada
+site:linkedin.com/jobs "DevOps engineer" "junior" Azure Canada
+site:linkedin.com/jobs "platform engineer" Kubernetes "junior" Canada
+site:jobbank.gc.ca "cloud developer" "Azure" Canada
 ```
 
-### Priority 4: Broader Technical / Consulting
+### Priority 3: SRE / Production Support / Technical Support Engineer (Leverages Amazon background)
 
-Wider net for general technical roles.
+Bridges the support background + cloud skills for reliability/operations-focused roles.
 
 ```
-site:[YOUR_JOB_BOARD] [YOUR_KEY_SKILL] developer [YOUR_CITY]
-site:linkedin.com/jobs "[YOUR_KEY_SKILL] developer" [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "technical consultant" [YOUR_DOMAIN] [YOUR_CITY]
+site:ca.indeed.com "site reliability engineer" "junior" Canada
+site:ca.indeed.com "production support" "developer" Canada
+site:ca.indeed.com "technical support engineer" "cloud" Ottawa Canada
+site:ca.indeed.com "application support" "TypeScript" OR "Node.js" Canada
+site:linkedin.com/jobs "SRE" "junior" "Canada"
+site:linkedin.com/jobs "production support engineer" "developer" Canada
+site:linkedin.com/jobs "technical support engineer" "Azure" Canada
+```
+
+### Priority 4: Adjacent / Broader Net
+
+Wider sweep for roles that match partial stack or adjacent skills.
+
+```
+site:ca.indeed.com "backend developer" "Node.js" Canada
+site:ca.indeed.com "frontend developer" "React" Ottawa
+site:ca.indeed.com "React developer" "junior" Canada
+site:ca.indeed.com "systems analyst" "junior" Ottawa Canada
+site:ca.indeed.com "implementation engineer" "SaaS" Canada
+site:ca.indeed.com "solutions engineer" "junior" Canada
+site:linkedin.com/jobs "backend developer" "Node.js" Canada
+site:linkedin.com/jobs "React developer" Canada remote
+site:linkedin.com/jobs "junior systems analyst" Ottawa Canada
+```
+
+### Priority 5: Federal / Government (Ottawa advantage)
+
+Ottawa's federal government and GC contractors are a strong geographic fit.
+
+```
+site:jobbank.gc.ca "IT analyst" Ottawa "junior"
+site:jobbank.gc.ca "software developer" Ottawa federal
+site:ca.indeed.com "federal government" "developer" Ottawa
+site:ca.indeed.com "government of Canada" "IT" "junior" Ottawa
+site:linkedin.com/jobs "government of Canada" developer Ottawa
 ```
 
 ## Location Filter
 
-When evaluating results, verify the job location is within reasonable commute distance from your home. Define acceptable areas:
-- [YOUR_CITY] and surrounding areas
-- [ACCEPTABLE_AREA_1]
-- [ACCEPTABLE_AREA_2]
-- [BORDERLINE_AREA] (borderline - ~X min by transit)
-- [TOO_FAR_AREA] (too far)
+When evaluating results, apply this tier priority:
+- **Ideal:** Ottawa, Kanata, Gatineau (on-site or hybrid) — any salary ≥ CAD 60k
+- **Acceptable:** Remote-Canada (any province) — any salary ≥ CAD 60k
+- **Relocation-open:** Toronto, Vancouver, Calgary, Montreal (hybrid/on-site) — flag for salary ≥ CAD 65k given cost of living
+- **US roles:** FAIL — no work authorization. Do not include even if "remote"
+- **French-primary:** FLAG if posting requires professional/bilingual French proficiency as hard requirement
 
 ## Date Filter
 
-Only include jobs posted within the last 14 days, or with an application deadline that has not yet passed. If a posting date cannot be determined, include it but flag as "date unknown".
+Only include jobs posted within the last **14 days**, or with an application deadline that has not yet passed.
+If a posting date cannot be determined, include it but flag as "date unknown."
+
+## Hard Filters (auto-exclude)
+
+Exclude postings that match any of these:
+- Require US work authorization or are US-only
+- Title contains: Senior, Lead, Staff, Principal, Director, Manager, VP, Architect (unless "junior" or "associate" also appears)
+- Primary language is Java, Go, or C++ (without JS/TS mentioned)
+- Require professional/bilingual French proficiency as a hard requirement
+- Unpaid / internship-only with no hire path stated
+
+## Salary Context
+
+Target range: **CAD 60,000 – 90,000** base.
+- Below CAD 55k: flag as low — ask user before including
+- Above CAD 90k: flag — likely requires more experience than Ekam has; check job level
 
 ## Adapting Queries
 
-If the user specifies a focus area, select queries from the matching category and also generate 2-3 custom queries for that focus. For example:
-- "/scrape [focus_area]" -> relevant category queries + custom focus-specific queries
+If the user specifies a focus area:
+- `/scrape cloud` → run Priority 2 queries + generate 2-3 custom Azure/Kubernetes queries
+- `/scrape fullstack` → run Priority 1 queries + generate 2-3 custom React/Node queries
+- `/scrape ottawa` → run all priorities but filter to Ottawa/Kanata/Gatineau results only
+- `/scrape remote` → run all priorities filtered to remote-Canada results

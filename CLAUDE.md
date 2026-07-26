@@ -1,10 +1,7 @@
-# Job Application Assistant for [YOUR_NAME]
-
-<!-- SETUP: This file is populated by running /setup -->
-<!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
+# Job Application Assistant for Ekam Bhatia
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
+This repo is a job application workspace. Claude acts as a career advisor and application assistant for Ekam Bhatia, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -13,70 +10,80 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ## Candidate Profile
 
-<!-- This section is auto-populated by /setup. You can also fill it in manually. -->
-
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
-- **Languages:** [YOUR_LANGUAGES]
-- **CV language:** [YOUR_CV_LANGUAGE] <!-- English unless your market expects otherwise; /setup asks -->
-
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+- **Name:** Ekam Bhatia
+- **Location:** Ottawa, Ontario, Canada (open to hybrid, remote, or on-site anywhere in Canada; no US work authorization)
+- **Phone:** (343) 558-8750
+- **Email:** ekamsingh643@gmail.com
+- **LinkedIn:** linkedin.com/in/ekam-bhatia-335840168
+- **GitHub:** github.com/bhat0155
+- **Portfolio:** ekamsingh.ca | **Blog:** ekamblogs.ca
+- **Languages:** English (fluent/professional), French (intermediate/conversational), Hindi & Punjabi (fluent)
+- **CV language:** English
+- **Status:** Employed part-time (4 days/week) + freelancing; actively seeking full-time
+- **LinkedIn headline:** "Full-Stack & Cloud/DevOps Developer | Azure · TypeScript · React · Node.js | Magna Cum Laude, Algonquin College 2025"
 
 ### Education
-<!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **Advanced Diploma, Mobile Application Design & Development** (Jan 2024 – Aug 2025) — Algonquin College, Ottawa
+  - Graduated Magna Cum Laude, GPA 3.7/4.0
+  - Topics: full-stack development, mobile app design, cloud integration, software engineering principles
 
 ### Professional Experience
-<!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+- **Full-Stack / Cloud Developer (Freelance)** (Aug 2025 – Present) — bhangrascape.ca (Remote, Ottawa)
+  - Built and deployed a full-stack event management platform (Next.js, Node.js, PostgreSQL) for a 20+ member group, owning the full lifecycle from design to production
+  - Architected secure media ingestion via AWS S3 presigned URLs, offloading file handling from the API server
+  - Implemented JWT, Google OAuth, RBAC, and Zod validation; managed CI/CD across Vercel and Render
+  - Provisioned cloud infrastructure with Terraform; containerized workloads with Docker/Kubernetes
+  - Tech: Node.js, Next.js, React, TypeScript, PostgreSQL, Prisma, AWS, Azure, Terraform, Docker, Kubernetes, CI/CD
+
+- **Technical Support Associate** (Oct 2020 – Nov 2022) — Amazon (Remote; office: Gurugram, India)
+  - Resolved 1,000+ complex technical/operational issues at a 95% resolution rate against strict SLAs
+  - Authored SOPs and runbooks adopted by 10+ new hires, cutting onboarding time 20%
+
+- **Warehouse Clerk (Co-op)** (Aug 2023 – Dec 2023) — The Beer Store, Ottawa
+  - Maintained 98% inventory accuracy; streamlined cross-dock procedures, cutting processing time 15%
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary:** JavaScript/TypeScript, Node.js/Express, React/Next.js; Azure Cloud & DevOps (Terraform, AKS, Docker, Kubernetes, CI/CD)
+- **Secondary:** C#/.NET, PostgreSQL/Prisma, AWS (S3, EC2), Python (college-level), Bash, REST API design
+- **DevOps/Cloud/SRE:** Terraform, AKS, Docker, Helm, GitHub Actions, Azure DevOps, Jenkins, Argo CD/GitOps, Prometheus, Grafana, Azure Monitor, Log Analytics, RBAC, Key Vault, SonarQube, Trivy, production monitoring & incident response
+- **AI/Automation:** AI coding assistants (daily driver), n8n workflows, Google Cloud Vision OCR + OpenAI API integration; Claude Code for agentic development workflows
+- **Databases:** PostgreSQL, MySQL, MongoDB, Redis, SQL
 
 ### Certifications
-<!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+- **Microsoft Certified: Azure Fundamentals (AZ-900)** — Microsoft — 2026
 
 ### Publications
-<!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
+- Technical blog — ekamblogs.ca — 19 posts covering: Terraform/Azure IaC (App Service, PostgreSQL, VNet, AKS, ACR, Azure SQL, bastion, Azure Policy, remote state, OIDC CI/CD), Jenkins CI/CD with SonarQube/Trivy, .NET+React CI/CD on Azure DevOps, Docker/Kubernetes with Prometheus/Grafana, Azure Functions/monitoring/security/networking, DNS, n8n automation (self-published)
 
 ### Awards
-<!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+- **Magna Cum Laude** — Algonquin College (2025)
 
 ### Behavioral Profile
-<!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
-- **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+- **Self-directed learner** — Built a 19-post technical blog while completing college; learns by building and writing
+- **Methodical/detail-oriented** — Root-cause troubleshooter; 95% SLA resolution rate at Amazon; 98% inventory accuracy
+- **Resilient** — Transitioned from tech support → warehouse co-op → full-stack/cloud developer; owns outcomes
+- **Strengths:** Unusually broad dev + DevOps stack for an early-career candidate; teaches complex topics clearly; owns projects end-to-end
+- **Growth areas:** Under 1 year professional dev experience; no production Python/Java/Go depth; diploma rather than degree; DevOps roles often gated by seniority
+- **Thrives in:** Small-to-mid-size teams where JS/TS/React/Node is core and DevOps is a differentiator; mentoring environment; roles with real ownership early
 
 ### What Excites You
-<!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+- Building meaningful solutions that solve real problems
+- Going deep on how systems work; learning new technologies where curiosity is an asset
+- Owning infrastructure end-to-end: from code to CI/CD pipeline to production monitoring
 
 ### Target Sectors
-<!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+- SaaS / product companies: Ottawa-area tech, Canadian scale-ups, remote-first companies
+- Fintech / banking: major Canadian banks (RBC, TD, BMO, Scotiabank, CIBC), fintech startups
+- Gov-adjacent / public sector: federal government contractors, DND/PSPC partners (non-clearance roles)
+- Healthtech: Canadian digital health companies
 
 ### Deal-breakers
-<!-- Hard constraints on job search -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+- US-only roles (no work authorization)
+- Roles requiring professional/fluent French as a hard requirement
+- Senior/lead/staff/principal roles (overqualification threshold)
+- Primary Java/Go/C++ roles (not core stack)
+- Unpaid positions
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)
