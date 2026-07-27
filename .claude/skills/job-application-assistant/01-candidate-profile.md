@@ -25,6 +25,7 @@ framework_version: 1.0.0
 
 ## Certifications
 - **Microsoft Certified: Azure Fundamentals (AZ-900)** — Microsoft — 2026
+- **Microsoft Certified: Azure Administrator Associate (AZ-104)** — In progress (2026)
 
 ## Professional Experience
 
@@ -49,8 +50,10 @@ Ottawa, ON
 
 ## Independent Projects
 
-- **bhangrascape.ca (event platform):** Full-stack event management platform built end-to-end — Next.js frontend, Node.js/Express API, PostgreSQL/Prisma, AWS S3 media ingestion, Terraform IaC, Docker/Kubernetes deployment, JWT + Google OAuth auth, CI/CD on Vercel/Render
-- **ekamblogs.ca (technical blog):** 19 self-published posts covering Terraform/Azure IaC, Jenkins CI/CD, .NET+React on Azure DevOps, Docker/Kubernetes with Prometheus/Grafana, Azure Functions, n8n automation, DNS, and Kubernetes conceptual guides
+- **bhangrascape.ca (event platform):** Full-stack event management platform built end-to-end — Next.js frontend, Node.js/Express API, PostgreSQL/Prisma, AWS S3 media ingestion, Terraform IaC, Docker/Kubernetes deployment, JWT + Google OAuth auth, CI/CD on Vercel/Render. GitHub: github.com/bhat0155/bhangraescape
+- **receiptchecker.ca (AI food safety API):** Two-AI pipeline — Google Cloud Vision for OCR, OpenAI GPT-4o mini for semantic matching against Health Canada recall notices. Core problem: receipts use abbreviated names ("GRND BF 500G") that string matching cannot handle; LLM acts as fuzzy matcher. Cost-conscious: Health Canada recall feed cached 6h TTL, fail-fast on bad OCR before paid LLM call. Deployed on AWS EC2 with GitHub Actions CI. Node.js, TypeScript, Express 5, PostgreSQL, Prisma, Multer, Node-Cache. GitHub: github.com/bhat0155/receipt-check
+- **xeffect.ca (production DevOps showcase):** Deliberately simple habit tracker used as a workload to build production-grade infrastructure: K8s with NGINX Ingress, PVC-backed Postgres stateful workload, GitOps with Argo CD, Azure Pipelines CI. Auth via Passport.js + JWT (distinct from NextAuth in bhangrascape.ca — demonstrates range). OpenAI for motivation messages with graceful degradation. React, TypeScript, Tailwind CSS, DaisyUI, Node.js, Express, PostgreSQL, Prisma, Jest, Swagger, Docker, Kubernetes, Argo CD, Azure Pipelines. GitHub: github.com/bhat0155/xeffect
+- **ekamblogs.ca (technical blog):** 19 self-published posts, ~300 monthly readers, covering Terraform/Azure IaC, Jenkins CI/CD, .NET+React on Azure DevOps, Docker/Kubernetes with Prometheus/Grafana, Azure Functions, n8n automation, DNS, and Kubernetes conceptual guides
 
 ## Technical Skills
 

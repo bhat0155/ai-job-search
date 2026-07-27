@@ -2,11 +2,37 @@
   "permissions": {
     "allow": [
       "Skill(job-scraper)",
-      "WebFetch(domain:jobs.hanzilla.co)",
-      "WebFetch(domain:bebee.com)",
-      "WebFetch(domain:dailyremote.com)",
+      "WebFetch",
       "WebSearch",
-      "Bash(lualatex -interaction=nonstopmode main_trendai_junior-web-developer.tex)"
+      "Bash(lualatex:*)",
+      "Bash(xelatex:*)",
+      "Bash(cd cv && lualatex:*)",
+      "Bash(cd cover_letters && xelatex:*)",
+      "Read(//Library/TeX/texbin/**)",
+      "Read(//usr/local/bin/**)",
+      "Bash(curl -s https://api.github.com/repos/bhat0155/xeffect)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('Description:', d.get\\('description','none'\\)\\); print\\('Language:', d.get\\('language','none'\\)\\); print\\('Topics:', d.get\\('topics','none'\\)\\)\")",
+      "Bash(curl -s https://api.github.com/repos/bhat0155/receipt-check)",
+      "Bash(curl -s https://raw.githubusercontent.com/bhat0155/xeffect/main/README.md)",
+      "Bash(curl -s https://raw.githubusercontent.com/bhat0155/receipt-check/main/README.md)",
+      "Bash(brew info *)",
+      "Bash(/Library/TeX/texbin/lualatex -interaction=nonstopmode main_fullstack.tex)",
+      "Bash(/Library/TeX/texbin/lualatex -interaction=nonstopmode main_support.tex)",
+      "Bash(/Library/TeX/texbin/lualatex -interaction=nonstopmode main_cloud.tex)",
+      "Read(//Users/ekambhatia/.bun/bin/**)",
+      "Bash(~/.bun/bin/bun --version)",
+      "Bash(~/.bun/bin/bun run *)",
+      "Bash(~/.bun/bin/bun -e ' *)",
+      "Bash(~/.bun/bin/bun *)",
+      "Bash(wait)",
+      "Bash(nslookup canada.ca)",
+      "Bash(nslookup emploisfp-psjobs.cfp-psc.gc.ca)",
+      "Bash(nslookup www.jobbank.gc.ca)",
+      "Bash(/Library/TeX/texbin/lualatex -interaction=nonstopmode main_autodesk_fullstack.tex)",
+      "Bash(/Library/TeX/texbin/lualatex -interaction=nonstopmode main_scotiabank_software-developer.tex)",
+      "Bash(/Library/TeX/texbin/lualatex -interaction=nonstopmode main_carelynk_fullstack.tex)",
+      "Bash(/Library/TeX/texbin/lualatex -interaction=nonstopmode main_trusscore_fullstack.tex)",
+      "Bash(/Library/TeX/texbin/lualatex -interaction=nonstopmode main_redwoodsoftware_associate.tex)"
     ]
   }
 }

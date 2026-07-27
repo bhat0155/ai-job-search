@@ -96,8 +96,8 @@ command (see its SKILL.md — do not guess flags) to extract **key requirements*
 fields manually.
 
 For every candidate:
-- Skip if the URL or company+title combo already exists in `seen_jobs.json`
-- Skip if the company+role already appears in `job_search_tracker.csv`
+- Skip if the **exact URL** already exists in `seen_jobs.json` (URL is the only dedup key — a re-post with a new URL is a new opportunity and must be shown even if the company+title match a previous entry)
+- Skip if the company+role already appears in `job_search_tracker.csv` (you have already applied)
 
 ### Step 2.5: Mass-Posting Detection (within this run)
 

@@ -52,9 +52,15 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ### Certifications
 - **Microsoft Certified: Azure Fundamentals (AZ-900)** — Microsoft — 2026
+- **Microsoft Certified: Azure Administrator Associate (AZ-104)** — In progress (2026)
+
+### Independent Projects
+- **bhangrascape.ca** — Full-stack event management platform (Next.js, Node.js, PostgreSQL, AWS S3, Terraform, Docker, Kubernetes, JWT + Google OAuth, CI/CD). GitHub: github.com/bhat0155/bhangraescape
+- **receiptchecker.ca** — Two-AI pipeline: Google Cloud Vision (OCR) + OpenAI GPT-4o mini (semantic matching) against live Health Canada recall notices. Core problem: abbreviated receipt names require LLM fuzzy matching, not string matching. Cost-conscious: 6h cached recall feed, fail-fast on bad OCR. Deployed AWS EC2 + GitHub Actions. Node.js, TypeScript, Express 5, PostgreSQL, Prisma. GitHub: github.com/bhat0155/receipt-check
+- **xeffect.ca** — Production DevOps showcase built on a trivial habit tracker workload: K8s with NGINX Ingress + PVC-backed Postgres stateful workload + Argo CD GitOps + Azure Pipelines CI. Passport.js + JWT auth (distinct from bhangrascape.ca's NextAuth — demonstrates auth range). OpenAI motivation messages with graceful degradation. React, TypeScript, Tailwind, DaisyUI, Node.js, Express, PostgreSQL, Prisma, Jest, Swagger. GitHub: github.com/bhat0155/xeffect
 
 ### Publications
-- Technical blog — ekamblogs.ca — 19 posts covering: Terraform/Azure IaC (App Service, PostgreSQL, VNet, AKS, ACR, Azure SQL, bastion, Azure Policy, remote state, OIDC CI/CD), Jenkins CI/CD with SonarQube/Trivy, .NET+React CI/CD on Azure DevOps, Docker/Kubernetes with Prometheus/Grafana, Azure Functions/monitoring/security/networking, DNS, n8n automation (self-published)
+- Technical blog — ekamblogs.ca — 19 posts, ~300 monthly readers, covering: Terraform/Azure IaC (App Service, PostgreSQL, VNet, AKS, ACR, Azure SQL, bastion, Azure Policy, remote state, OIDC CI/CD), Jenkins CI/CD with SonarQube/Trivy, .NET+React CI/CD on Azure DevOps, Docker/Kubernetes with Prometheus/Grafana, Azure Functions/monitoring/security/networking, DNS, n8n automation (self-published)
 
 ### Awards
 - **Magna Cum Laude** — Algonquin College (2025)
