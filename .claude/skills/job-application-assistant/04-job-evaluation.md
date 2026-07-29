@@ -44,8 +44,8 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** JavaScript/TypeScript, Node.js/Express, React/Next.js, Azure Cloud (AKS, App Service, Azure DevOps, Azure Monitor), Terraform IaC, Docker/Kubernetes, GitHub Actions CI/CD, PostgreSQL/Prisma, REST API design, JWT/OAuth 2.0
-**Moderate match areas:** C#/.NET, AWS (S3/EC2), Python (scripting/automation), Bash, Helm, Argo CD/GitOps, SonarQube, Prometheus/Grafana, n8n automation
+**Strong match areas:** JavaScript/TypeScript, Node.js/Express, React/Next.js, Azure Cloud (AKS, App Service, Azure DevOps, Azure Monitor), Terraform IaC, Docker/Kubernetes, GitHub Actions CI/CD, PostgreSQL/Prisma, REST API design, JWT/OAuth 2.0, incident response/SLA management, technical documentation/runbooks
+**Moderate match areas:** C#/.NET, AWS (S3/EC2), Python (scripting/automation), Bash, Helm, Argo CD/GitOps, SonarQube, Prometheus/Grafana, n8n automation, Linux administration, cloud ops/monitoring
 **Weak match areas:** Java, Go, C++, Ruby, production ML/data science, mobile native (iOS/Android), Rust, advanced ML frameworks (PyTorch/TensorFlow production)
 
 ### 2. Experience Match (0-100)
@@ -58,8 +58,10 @@ Does work history align with what they're looking for?
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** Full-stack web development (Next.js/Node.js/React), cloud infrastructure provisioning (Terraform/Azure), CI/CD pipeline setup, production incident response (Amazon SLA background), technical documentation/runbooks
-**Moderate:** DevOps engineering (strong tooling knowledge but <1yr professional title), SRE/platform engineering concepts (Prometheus/Grafana, on-call), backend API development (C#/.NET)
+**Early-career calibration (apply this before scoring):** This candidate is <1 year into professional software/cloud work. Freelance, academic projects, and self-directed production deployments count as related experience — not adjacent. A posting requiring "2–3 years" with a stack Ekam demonstrably knows via bhangrascape.ca/xeffect.ca/receiptchecker.ca scores 50–65, not 20–35. Score what the candidate can actually do, not the years listed. Years requirements on postings are negotiating positions, not hard gates — especially for roles that explicitly say "or equivalent experience."
+
+**Strong:** Full-stack web development (Next.js/Node.js/React), cloud infrastructure provisioning (Terraform/Azure), CI/CD pipeline setup, production incident response (Amazon SLA background), technical documentation/runbooks, Tier 2/3 technical support
+**Moderate:** DevOps engineering (strong tooling knowledge but <1yr professional title), SRE/platform engineering concepts (Prometheus/Grafana, on-call), backend API development (C#/.NET), cloud operations/administration
 **Entry-level/Stretch:** Pure mobile development, data science/ML engineering, enterprise Java development, solutions architecture (junior level only)
 
 ### 3. Behavioral/Culture Fit (0-100)
@@ -96,6 +98,8 @@ Does this role advance career goals and contain tasks that energize?
 - Land a full-time junior/associate software developer or cloud/DevOps engineer role with a real team and mentorship (immediate)
 - Build 2–3 years of production experience across the JS/TS/Azure stack to qualify for mid-level roles
 - Long-term: technical lead or solutions architect path in cloud-native or platform engineering
+
+**Side-door roles score 60–75 on this dimension (not lower).** Cloud Support Engineer, Application Support Analyst, Technical Support Engineer (Tier 2/3), IT Operations Analyst, Cloud Ops Administrator, and Platform Support Engineer are legitimate stepping stones — not dead ends. They provide: production exposure across real infrastructure, credentialed cloud ops experience, and a proven path to SRE/cloud engineer promotions within 12–18 months, especially at Canadian MSPs, SaaS companies, and government contractors. A support role at a cloud-native company scores higher than a dev role at a company with a stagnant, legacy stack.
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
 - Tasks that energize: building production systems end-to-end, infrastructure automation, solving root-cause problems, writing technical documentation, learning new cloud/DevOps patterns
@@ -166,17 +170,17 @@ Present the evaluation as:
 ```
 
 ## Weighting
-- Technical Skills: 30%
-- Experience Match: 25%
+- Technical Skills: 35% (raised — demonstrable via projects regardless of years)
+- Experience Match: 15% (reduced — early-career candidate; years listed on postings are not hard gates)
 - Behavioral Fit: 15%
-- Career Alignment: 30%
+- Career Alignment: 35% (raised — includes side-door support roles as valid path)
 
 (Location is pass/fail, not weighted)
 
 ## Thresholds
 - **Strong Fit** (75+): Definitely apply, tailor everything
 - **Good Fit** (60-74): Apply, address gaps in cover letter
-- **Moderate Fit** (45-59): Consider carefully, discuss with user
+- **Moderate Fit** (45-59): Apply if the role is a side-door or stack match is strong; discuss with user
 - **Weak Fit** (30-44): Probably skip unless strategic reasons
 - **Poor Fit** (<30): Skip
 

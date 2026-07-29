@@ -1,27 +1,34 @@
 # Search Queries for Job Scraper — Ekam Bhatia
 
-<!-- Canada-focused job search: Ottawa, remote Canada, and Toronto -->
+<!-- Canada-wide job search: Ottawa preferred, remote Canada, open to relocate anywhere in Canada -->
 
 ## Installed portal CLIs (primary for `/scrape`)
 
 `/scrape` discovers every portal skill under `.agents/skills/*/SKILL.md` and runs its CLI first.
 
-**Installed and enabled CLIs:**
-- `linkedin-search` — LinkedIn jobs (worldwide, supports `--location`, `--jobage`, `--remote`)
-- `freehire-search` — Freehire.me (remote-first tech jobs, `--country CA`, `--seniority junior`)
+**Installed and enabled CLIs (bash):**
+- `linkedin-search` — LinkedIn jobs (worldwide, `--location`, `--jobage`, `--remote`)
+- `freehire-search` — Freehire.me (remote-first tech, `--country CA`, `--seniority junior`)
 - `jobbank-gc-search` — Government of Canada Job Bank (jobbank.gc.ca, `--province`, `--jobage`, `--remote`)
+- `remotive-search` — Remotive.com (remote tech JSON API, `--query`, `--category`, `--jobage`; auto-filters Canada/Worldwide)
+- `weworkremotely-search` — We Work Remotely RSS (`--query`, `--category all|programming|devops-sysadmin`, `--jobage`; auto-filters Anywhere/North America/Canada)
+- `himalayas-search` — Himalayas.app (remote tech JSON API, `--query`, `--jobage`; auto-filters Canada/Worldwide)
 
-**Coverage gaps (not feasible as CLIs — use WebSearch fallback):**
-- **Indeed Canada** — hard 403 on all endpoints including individual job pages; covered via `site:ca.indeed.com/viewjob` WebSearch (Google snippets only — URL saved for manual application)
-- **PS Jobs** — fully JavaScript-rendered, no accessible API; covered via `site:psjobs-emploisfp.psc-cfp.gc.ca` WebSearch
+**Installed and enabled (WebSearch-based — no CLI, see each SKILL.md for queries):**
+- `indeed-ca-search` — Indeed Canada (ca.indeed.com); Cloudflare blocks all HTTP — uses `site:ca.indeed.com/viewjob` WebSearch
+- `psjobs-search` — GC Jobs / PS Jobs (psjobs-emploisfp.psc-cfp.gc.ca); JS session required — uses `site:psjobs-emploisfp.psc-cfp.gc.ca` WebSearch
+- `otta-search` — Otta.com (tech-focused board); Next.js SPA — uses `site:otta.com` WebSearch
+- `monster-ca-search` — Monster Canada (monster.ca); Next.js SPA — uses `site:monster.ca` WebSearch
+
+**No viable coverage (skip entirely):**
 - **Workopolis / Glassdoor** — 403 on all requests; no viable fallback
-- **hiring.cafe** — keyword search is 100% client-side Algolia; not accessible without API credentials
+- **ca.talent.com** — Next.js shell, no embedded job data, no public API
+- **hiring.cafe** — 100% client-side Algolia; not accessible without API credentials
 
-The `site:` query templates below are the **WebSearch fallback**. For Indeed, use `site:ca.indeed.com/viewjob` (individual posting pages) not `site:ca.indeed.com` (returns category pages). WebFetch on Indeed URLs will 403 — treat WebSearch snippets as read-only leads.
+## Installed portal skills
 
-## Installed portal CLIs
-
-Active: `linkedin-search`, `freehire-search`, `jobbank-gc-search`
+CLI portals: `linkedin-search`, `freehire-search`, `jobbank-gc-search`, `remotive-search`, `weworkremotely-search`, `himalayas-search`
+WebSearch portals: `indeed-ca-search`, `psjobs-search`, `otta-search`, `monster-ca-search`
 Disabled: `jobbank-search` (targets jobbank.dk — Denmark, not Canada).
 Removed Danish portals (`jobdanmark-search`, `jobindex-search`, `jobnet-search`) — irrelevant for Canada.
 
@@ -60,16 +67,61 @@ These match the core JS/TS/React/Node.js stack and are the most likely to land i
 --query "junior software developer" --jobage 14
 --query "React developer" --jobage 14
 --query "Node.js developer" --jobage 14
+--query "software developer" --province BC --jobage 14
+--query "software developer" --province AB --jobage 14
+--query "full stack developer" --province QC --jobage 14
 ```
 
-**WebSearch fallback (for boards not covered by CLIs):**
+**linkedin-search CLI queries (run these via the CLI):**
 ```
-site:ca.indeed.com/viewjob "software developer" "TypeScript" Ottawa
-site:ca.indeed.com/viewjob "full-stack developer" "React" Ottawa
-site:ca.indeed.com/viewjob "junior software developer" "Node.js" Canada
+--query "software developer" --location "Ottawa, Ontario, Canada" --jobage 14
+--query "full stack developer" --location "Canada" --remote remote --jobage 14
+--query "junior software developer" --location "Canada" --jobage 14
+--query "TypeScript developer" --location "Canada" --jobage 14
+--query "React developer" --location "Toronto, Ontario, Canada" --jobage 14
+--query "Node.js developer" --location "Vancouver, British Columbia, Canada" --jobage 14
+--query "application developer" --location "Canada" --remote hybrid --jobage 14
+```
+
+**freehire-search CLI queries (run these via the CLI):**
+```
+--category fullstack --country CA --seniority junior --jobage 14
+--category fullstack --remote remote --seniority junior --jobage 14
+--query "TypeScript" --category fullstack --seniority junior --jobage 14
+```
+Note: use `--category fullstack` not `--query "full stack developer" --country CA --seniority junior` — the latter returns non-tech results because freehire's seniority tag spans all roles.
+
+**remotive-search CLI queries:**
+```
+--query "full stack developer" --category software-development --jobage 14
+--query "TypeScript developer" --jobage 14
+--query "React Node.js" --category software-development --jobage 14
+--query "junior developer" --category software-development --jobage 14
+```
+
+**weworkremotely-search CLI queries:**
+```
+--query "developer" --category all --jobage 14
+--query "TypeScript" --category all --jobage 14
+--query "React" --category all --jobage 14
+--query "Node.js" --category all --jobage 14
+```
+
+**himalayas-search CLI queries:**
+```
+--query "full stack developer" --jobage 14
+--query "TypeScript React" --jobage 14
+--query "junior software developer" --jobage 14
+```
+
+**indeed-ca-search (WebSearch portal skill — see `.agents/skills/indeed-ca-search/SKILL.md` for queries)**
+**otta-search (WebSearch portal skill — see `.agents/skills/otta-search/SKILL.md` for queries)**
+**monster-ca-search (WebSearch portal skill — see `.agents/skills/monster-ca-search/SKILL.md` for queries)**
+
+**WebSearch fallback (non-portal boards):**
+```
 site:workopolis.com/job "full-stack developer" "TypeScript" Ottawa Canada
 site:eluta.ca/jobs "software developer" "TypeScript" Ottawa
-site:goodwork.ca/jobs "developer" "React" "Node.js"
 site:wellfound.com/jobs "full stack" "TypeScript" Canada remote
 ```
 
@@ -83,44 +135,122 @@ Ekam's Azure + Terraform + Kubernetes depth makes him competitive at junior/asso
 --query "DevOps engineer" --province ON --jobage 14
 --query "cloud developer" --jobage 14
 --query "DevOps" --remote --jobage 14
+--query "DevOps engineer" --province BC --jobage 14
+--query "DevOps engineer" --province AB --jobage 14
+--query "platform engineer" --jobage 14
 ```
 
-**WebSearch fallback:**
+**linkedin-search CLI queries:**
 ```
-site:ca.indeed.com/viewjob "cloud engineer" "Azure" Ottawa Canada
-site:ca.indeed.com/viewjob "DevOps engineer" "Terraform" Canada
-site:ca.indeed.com/viewjob "junior DevOps" "Azure" Canada
+--query "cloud engineer" --location "Canada" --jobage 14
+--query "DevOps engineer" --location "Ottawa, Ontario, Canada" --jobage 14
+--query "DevOps engineer" --location "Canada" --remote remote --jobage 14
+--query "platform engineer" --location "Canada" --jobage 14
+--query "junior cloud engineer" --location "Canada" --jobage 14
+--query "Azure developer" --location "Canada" --jobage 14
+--query "infrastructure developer" --location "Toronto, Ontario, Canada" --jobage 14
+```
+
+**freehire-search CLI queries:**
+```
+--category devops --country CA --seniority junior --jobage 14
+--category devops --remote remote --seniority junior --jobage 14
+--query "kubernetes" --category devops --seniority junior --jobage 14
+```
+
+**remotive-search CLI queries:**
+```
+--query "DevOps" --category devops --jobage 14
+--query "cloud engineer" --jobage 14
+--query "Kubernetes" --category devops --jobage 14
+```
+
+**weworkremotely-search CLI queries:**
+```
+--query "DevOps" --category devops-sysadmin --jobage 14
+--query "cloud engineer" --category devops-sysadmin --jobage 14
+--query "Terraform" --category all --jobage 14
+```
+
+**himalayas-search CLI queries:**
+```
+--query "DevOps engineer" --jobage 14
+--query "cloud engineer Azure" --jobage 14
+```
+
+**indeed-ca-search (WebSearch portal skill — see `.agents/skills/indeed-ca-search/SKILL.md` for queries)**
+
+**WebSearch fallback (non-portal boards):**
+```
 site:workopolis.com/job "cloud engineer" "Azure" Canada
 ```
 
-### Priority 3: SRE / Production Support / Technical Support Engineer (Leverages Amazon background)
+### Priority 3: SRE / Cloud Support / Technical Support Engineer (Side-door + Amazon background)
 
-Bridges the support background + cloud skills for reliability/operations-focused roles.
+These are "side-door" roles — support titles that provide production cloud exposure and a proven internal promotion path to SRE/cloud engineer within 12–18 months. Ekam's Amazon support background (1,000+ tickets, 95% SLA) + cloud stack makes him genuinely competitive here. Run these alongside Priority 1 and 2, not after them.
 
 **jobbank-gc-search CLI queries:**
 ```
---query "site reliability engineer" --jobage 14
---query "production support developer" --jobage 14
 --query "technical support engineer" --jobage 14
+--query "application support analyst" --jobage 14
+--query "IT operations analyst" --jobage 14
+--query "cloud support" --jobage 14
+--query "cloud operations" --province ON --jobage 14
+--query "cloud administrator" --jobage 14
+--query "platform support" --jobage 14
 ```
 
-**WebSearch fallback (Google-indexed Indeed pages — snippets only, pages may 403 on fetch):**
+**linkedin-search CLI queries:**
 ```
-site:ca.indeed.com/viewjob "site reliability engineer" "junior" Canada
-site:ca.indeed.com/viewjob "production support" "developer" Canada
-site:ca.indeed.com/viewjob "technical support engineer" "cloud" Ottawa Canada
-site:ca.indeed.com/viewjob "application support" "TypeScript" Canada
+--query "cloud support engineer" --location "Canada" --jobage 14
+--query "technical support engineer" --location "Canada" --jobage 14
+--query "application support analyst" --location "Ottawa, Ontario, Canada" --jobage 14
+--query "IT operations analyst" --location "Ottawa, Ontario, Canada" --jobage 14
+--query "cloud operations analyst" --location "Canada" --jobage 14
+--query "junior site reliability engineer" --location "Canada" --jobage 14
+--query "cloud administrator" --location "Canada" --jobage 14
+--query "platform support engineer" --location "Canada" --jobage 14
+```
+
+**remotive-search CLI queries:**
+```
+--query "technical support engineer" --category information-technology --jobage 14
+--query "cloud support" --jobage 14
+```
+
+**weworkremotely-search CLI queries:**
+```
+--query "support engineer" --category devops-sysadmin --jobage 14
+--query "SRE" --category all --jobage 14
+```
+
+**indeed-ca-search (WebSearch portal skill — see `.agents/skills/indeed-ca-search/SKILL.md` for queries)**
+
+**WebSearch fallback (non-portal boards):**
+```
+site:careers.microsoft.com "cloud support engineer" Canada
+site:pythian.com/company/careers "cloud" support
+site:cgi.com/en/careers "cloud" "support" Ottawa
 ```
 
 ### Priority 4: Adjacent / Broader Net
 
 Wider sweep for roles that match partial stack or adjacent skills.
 
+**linkedin-search CLI queries:**
 ```
-site:ca.indeed.com/viewjob "backend developer" "Node.js" Canada
-site:ca.indeed.com/viewjob "frontend developer" "React" Ottawa
-site:ca.indeed.com/viewjob "React developer" "junior" Canada
-site:ca.indeed.com/viewjob "implementation engineer" "SaaS" Canada
+--query "backend developer" --location "Canada" --remote remote --jobage 14
+--query "frontend developer" --location "Ottawa, Ontario, Canada" --jobage 14
+--query "React developer" --location "Canada" --jobage 14
+--query "junior systems analyst" --location "Ottawa, Ontario, Canada" --jobage 14
+--query "solutions engineer" --location "Canada" --jobage 14
+--query "implementation engineer" --location "Canada" --jobage 14
+```
+
+**indeed-ca-search (WebSearch portal skill — see `.agents/skills/indeed-ca-search/SKILL.md` for queries)**
+
+**WebSearch fallback (non-portal boards):**
+```
 site:linkedin.com/jobs "backend developer" "Node.js" Canada
 site:linkedin.com/jobs "React developer" Canada remote
 site:linkedin.com/jobs "junior systems analyst" Ottawa Canada
@@ -129,7 +259,6 @@ site:linkedin.com/jobs "junior systems analyst" Ottawa Canada
 ### Priority 5: Federal / Government (Ottawa advantage)
 
 Ottawa's federal government and GC contractors are a strong geographic fit.
-**Coverage note:** PS Jobs (`psjobs-emploisfp.psc-cfp.gc.ca`) is fully JavaScript-rendered — no CLI possible. Use the two-pronged approach below: GC Job Bank CLI for non-internal postings + WebSearch for Google-indexed PS Jobs pages.
 
 **jobbank-gc-search CLI queries (covers GC contractors and gov-adjacent employers):**
 ```
@@ -137,16 +266,19 @@ Ottawa's federal government and GC contractors are a strong geographic fit.
 --query "software developer" --province ON --location "Ottawa, Ontario" --jobage 14
 --query "application developer" --province ON --jobage 14
 --query "systems analyst" --province ON --jobage 14
+--query "IT consultant" --province ON --jobage 14
 ```
 
-**WebSearch — PS Jobs portal (Google indexes individual postings here):**
+**linkedin-search CLI queries:**
 ```
-site:psjobs-emploisfp.psc-cfp.gc.ca "developer" "Ottawa"
-site:psjobs-emploisfp.psc-cfp.gc.ca "IT analyst" "Ottawa"
-site:psjobs-emploisfp.psc-cfp.gc.ca "software" "EN"
+--query "IT analyst" --location "Ottawa, Ontario, Canada" --jobage 14
+--query "junior developer" --location "Ottawa, Ontario, Canada" --jobage 14
+--query "application developer" --location "Ottawa, Ontario, Canada" --jobage 14
 ```
 
-**WebSearch — GC contractors (non-clearance roles):**
+**psjobs-search (WebSearch portal skill — see `.agents/skills/psjobs-search/SKILL.md` for queries)**
+
+**indeed-ca-search (WebSearch portal skill — GC contractor roles):**
 ```
 site:ca.indeed.com/viewjob "CGI" "developer" Ottawa
 site:ca.indeed.com/viewjob "Pythian" developer Ottawa
@@ -199,12 +331,14 @@ site:ca.indeed.com/viewjob "new grad" "software developer" Canada
 
 ## Location Filter
 
+Candidate is based in Ottawa but **open to relocating anywhere in Canada** for the right role. Never exclude a job solely because it is outside Ottawa.
+
 When evaluating results, apply this tier priority:
 - **Ideal:** Ottawa, Kanata, Gatineau (on-site or hybrid) — any salary ≥ CAD 60k
-- **Acceptable:** Remote-Canada (any province) — any salary ≥ CAD 60k
-- **Relocation-open:** Toronto, Vancouver, Calgary, Montreal (hybrid/on-site) — flag for salary ≥ CAD 65k given cost of living
-- **US roles:** FAIL — no work authorization. Do not include even if "remote"
-- **French-primary:** FLAG if posting requires professional/bilingual French proficiency as hard requirement
+- **Ideal:** Remote-Canada (any province) — any salary ≥ CAD 60k
+- **Relocation-open:** Toronto, Vancouver, Calgary, Montreal, Edmonton, Waterloo (hybrid/on-site) — include and flag salary ≥ CAD 65k given cost of living difference
+- **US roles:** FAIL — no work authorization. Exclude even if labelled "remote" unless the posting explicitly says "Canada remote"
+- **French-primary:** FLAG if posting requires professional/bilingual French proficiency as a hard requirement (conversational French is fine)
 
 ## Date Filter
 
@@ -215,10 +349,11 @@ If a posting date cannot be determined, include it but flag as "date unknown."
 
 Exclude postings that match any of these:
 - Require US work authorization or are US-only
-- Title contains: Senior, Lead, Staff, Principal, Director, Manager, VP, Architect (unless "junior" or "associate" also appears)
-- Primary language is Java, Go, or C++ (without JS/TS mentioned)
+- Title contains: Senior, Lead, Staff, Principal, Director, Manager, VP, Architect (unless "junior" or "associate" also appears) — **exception: support/operations titles like "Senior Support Analyst" where the "senior" reflects tenure tier, not a software engineering seniority level. Use judgment.**
+- Primary language is Java, Go, or C++ (without JS/TS mentioned) — **exception: support/cloud ops roles where the stack is infrastructure tooling (Terraform, Azure, Kubernetes) and coding is secondary**
 - Require professional/bilingual French proficiency as a hard requirement
 - Unpaid / internship-only with no hire path stated
+- Require active Secret or Top Secret security clearance (Reliability Level clearance is acceptable — it is obtainable post-hire)
 
 ## Salary Context
 

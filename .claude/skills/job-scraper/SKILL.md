@@ -5,7 +5,7 @@ description: >
   (LinkedIn, local job boards, and any skills added with /add-portal). Deduplicates
   across runs. Triggers on: job scrape, find jobs, search jobs, new jobs, job search,
   scrape jobs, /scrape
-allowed-tools: Read, Write, Edit, Glob, Grep, Bash(bun --version), Bash(bun run .agents/skills/*/cli/src/cli.ts *), WebFetch, WebSearch, Agent, AskUserQuestion
+allowed-tools: Read, Write, Edit, Glob, Grep, Bash(bun --version), Bash(bun run .agents/skills/*/cli/src/cli.ts *), WebFetch, WebSearch, Agent, AskUserQuestion, mcp__claude_ai_Gmail__search_threads
 ---
 
 # Job Scraper
@@ -41,6 +41,64 @@ Optional arguments:
 1. Read `job_scraper/seen_jobs.json` (create if missing - start with `{"seen": {}}`)
 2. Read `job_search_tracker.csv` to extract already-applied companies+roles
 3. Read `search-queries.md` (this directory) for the search strategy
+
+### Step 0.5: Gmail Application Confirmation Check
+
+Before searching for new jobs, query Gmail to find companies you've already applied to that may not appear in `job_search_tracker.csv`. This catches LinkedIn Easy Apply submissions, ATS-direct applications, and any role applied to but not yet logged.
+
+**Run two Gmail searches using `mcp__claude_ai_Gmail__search_threads` (run in parallel):**
+
+1. Confirmation emails (inbound):
+   ```
+   ("thanks for applying" OR "thank you for applying" OR "application received" OR "we received your application") newer_than:60d
+   ```
+2. Sent application emails (outbound):
+   ```
+   in:sent ("applied" OR "application") newer_than:60d
+   ```
+
+Cap both at 50 results. For each thread returned, extract:
+- **Company name** from the subject line or snippet (e.g. `"Ekam, thanks for applying to Vena!"` → `vena`)
+- **Role** if discernible from the subject or snippet
+
+Build a **`gmail_applied`** set: a list of `{company: string (lowercase), role_hint: string}` pairs.
+
+**During Step 2 dedup**, also skip any job result whose company name loosely matches an entry in `gmail_applied` (case-insensitive substring match). When a Gmail match causes a skip, record it as:
+```
+skipped (applied per Gmail): Company — Role
+```
+Surface these skips in the Step 5 summary so the user can verify. Also add the matched job to `job_search_tracker.csv` with `status=applied` and note `source=gmail-inferred` in the notes column, so the tracker stays in sync.
+
+**Bounds:** At most 2 Gmail search calls, 50 results each. If Gmail is unavailable or returns an auth error, log `gmail check: unavailable` in the Step 5 summary and continue — do not abort the scrape.
+
+### Step 0.75: Stale Application Check
+
+Scan the tracker loaded in Step 0. Before running any searches, flag applications that may need a follow-up message.
+
+**Flag as follow-up due:** any row where `status` is `applied` and more than **10 business days** have elapsed since `date_applied` (exclude weekends; count Mon–Fri only).
+
+For each flagged application, draft a short follow-up email:
+- **Subject:** `Following up — [Role] at [Company]`
+- **Body:** 3 sentences max. Restate specific interest in the role, name one thing about the company or role that stood out, ask politely about timeline or next steps. No desperation. No demands.
+
+Cap at **3 drafts per run** (oldest applications first). If more than 3 are stale, list all in the table but only draft for the 3 oldest.
+
+Present stale applications **before the Step 5 job table** (after the Gmail skip summary) under this heading:
+
+```
+### Follow-up Due (N applications)
+| Company | Role | Applied | Business Days Waiting |
+|---------|------|---------|----------------------|
+| ...     | ...  | ...     | ...                  |
+
+**Draft — [Company]:**
+Subject: Following up — [Role] at [Company]
+---
+[3-sentence email body]
+---
+```
+
+Skip this step entirely if no applications meet the 10-business-day threshold.
 
 ### Step 1: Search
 
@@ -98,6 +156,10 @@ fields manually.
 For every candidate:
 - Skip if the **exact URL** already exists in `seen_jobs.json` (URL is the only dedup key — a re-post with a new URL is a new opportunity and must be shown even if the company+title match a previous entry)
 - Skip if the company+role already appears in `job_search_tracker.csv` (you have already applied)
+- Skip if the company loosely matches an entry in the `gmail_applied` set built in Step 0.5 (applied per Gmail — not yet logged in tracker)
+- Skip if the company name is absent or the posting describes "our client" without naming the end employer — flag as "unnamed client posting" so the user can decide whether to pursue it
+- Skip if the apply URL redirects to a third-party generic job board with no named company ATS (e.g. generic hanzilla/ziprecruiter landing pages where the company cannot be verified) — note the skip reason
+- Skip if the same company+title appeared in `seen_jobs.json` within the last 7 days under a different URL — this is a re-post, not a new opportunity; consolidate and note "re-post" rather than showing as new
 
 ### Step 2.5: Mass-Posting Detection (within this run)
 
@@ -234,8 +296,8 @@ If the user decides to apply to any job, add a row to `job_search_tracker.csv`.
 ## Important Rules
 
 1. **Never fabricate job postings.** Only present jobs from actual CLI search/detail output or WebSearch/WebFetch results.
-2. **Respect deduplication.** Always check seen_jobs.json AND job_search_tracker.csv before presenting.
-3. **Focus on configured geographic area.** Skip jobs that require relocation or are clearly outside commute range.
+2. **Respect deduplication.** Always check seen_jobs.json, job_search_tracker.csv, AND the Gmail `gmail_applied` set (Step 0.5) before presenting. Never surface a job the user has already applied to.
+3. **Focus on configured geographic area.** The configured area is defined in `search-queries.md`'s Location Filter — for this candidate it covers all of Canada. Ottawa/remote are preferred, but any Canadian city is acceptable for relocation. Exclude US-only roles and roles outside Canada. Never skip a job solely because it requires relocation within Canada.
 4. **Only open positions.** Skip postings with expired deadlines or those marked as closed.
 5. **Be efficient with detail fetches.** Don't run `detail` or WebFetch on every search hit — pre-filter by title/snippet, then fetch only promising matches.
 6. **Parallel searches.** Run portal CLI searches in parallel; use WebSearch only for gaps the CLIs don't cover.

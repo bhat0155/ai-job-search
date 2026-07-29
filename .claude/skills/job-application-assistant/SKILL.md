@@ -25,6 +25,37 @@ When the user provides a job posting (URL or text), follow this workflow:
 - Suggest whether the candidate should call the employer before applying (see `04-job-evaluation.md` for guidance)
 - Ask the user if they want to proceed with an application
 
+### Step 1.5: LinkedIn Outreach (High-fit jobs only)
+
+**Only run this step when the overall score is 65 or higher.**
+
+Before drafting the CV, surface LinkedIn outreach options. A warm message to a recruiter or team peer before submitting materially increases interview probability — do not skip this for strong fits.
+
+Generate two LinkedIn people-search URLs:
+- **Recruiter/TA:** `https://www.linkedin.com/search/results/people/?keywords=<url-encoded "[Company] recruiter talent acquisition">&origin=GLOBAL_SEARCH_HEADER`
+- **Team peer:** `https://www.linkedin.com/search/results/people/?keywords=<url-encoded "[Company] [role keyword]">&origin=GLOBAL_SEARCH_HEADER`
+
+Then draft a **LinkedIn connection message** (≤300 characters — LinkedIn's hard limit):
+- Name the specific role title
+- Reference one concrete thing about the company from the Step 1 research (product, mission, recent news — not generic praise)
+- End with a soft ask ("would love to connect") — no CV attachment, no ask for a referral on first contact
+- Tone: confident and direct, not eager
+
+Present as:
+```
+### LinkedIn Outreach — Do This Before Submitting
+
+**Find a recruiter:** [Search link]
+**Find a team peer:** [Search link]
+
+**Connection message (≤300 chars, copy-paste ready):**
+> [drafted message]
+
+Send this first, then submit the application. Or type "skip" to go straight to the CV.
+```
+
+Do not block on this step — if the user says "skip" or asks directly for the CV, proceed to Step 2 immediately.
+
 ### Step 2: Tailor CV
 - Read the most relevant existing CV variant from `cv/` as a starting point
 - Follow the guidelines in `05-cv-templates.md`

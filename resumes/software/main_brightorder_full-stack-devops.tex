@@ -1,0 +1,115 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[T1]{fontenc}
+\usepackage[sfdefault]{inter}
+\usepackage{needspace}
+
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+\titleformat{\section}{\large\bfseries\uppercase}{}{0pt}{}[\titlerule]
+\titlespacing{\section}{0pt}{14pt}{6pt}
+\setlist[itemize]{noitemsep, topsep=1pt, parsep=2pt, leftmargin=1.2em, label=--}
+
+\begin{document}
+
+% --- Header ---
+\begin{center}
+    {\LARGE \textbf{Ekam Bhatia}} \\
+    \vspace{2pt}
+    {\normalsize Full-Stack & DevOps Developer} \\
+    \vspace{4pt}
+    \small
+    \href{mailto:ekamsingh643@gmail.com}{ekamsingh643@gmail.com} $|$
+    (343) 558-8750 $|$ Ottawa, ON $|$
+    \href{https://www.ekamsingh.ca}{ekamsingh.ca} $|$
+    \href{https://www.ekamblogs.ca}{ekamblogs.ca} $|$
+    \href{https://www.linkedin.com/in/ekam-bhatia-335840168}{LinkedIn} $|$
+    \href{https://github.com/bhat0155}{GitHub}
+\end{center}
+
+% --- Summary ---
+\section{Professional Summary}
+Full-stack developer with demonstrated expertise in cloud infrastructure, CI/CD automation, and containerized deployment. Combines backend/frontend capability (TypeScript, React, Node.js) with strong DevOps and AWS infrastructure-as-code skills (Terraform, Docker, Kubernetes). Takes end-to-end ownership of systems from code to production monitoring. Self-directed builder who learns new stacks by shipping production workloads.
+
+% --- Skills ---
+\section{Technical Skills}
+\begin{itemize}
+    \item \textbf{Languages:} TypeScript, JavaScript (ES6+), Node.js, C\# (familiar), SQL, Bash, Python (familiar).
+    \item \textbf{Full-Stack:} React, Next.js, Express.js, REST API design, PostgreSQL, Prisma ORM, JWT, OAuth 2.0, RBAC.
+    \item \textbf{Cloud \& Infrastructure:} AWS (S3, EC2, IAM), Microsoft Azure (AKS, App Services, Key Vault), Terraform (modules, remote state, OIDC).
+    \item \textbf{DevOps \& Deployment:} Docker (multi-stage builds), Kubernetes (Deployments, Services, Ingress, PVCs), GitHub Actions, Azure Pipelines, Jenkins, Argo CD.
+    \item \textbf{Quality \& Security:} SonarQube, Trivy container scanning, Helm, CI/CD automation, secure credential management.
+    \item \textbf{Observability:} Prometheus, Grafana, Azure Monitor, Application Insights, structured logging.
+\end{itemize}
+
+% --- Technical Experience ---
+\section{Technical Experience}
+
+\needspace{5\baselineskip}
+\textbf{Full-Stack Developer (Freelance)} $|$ \href{https://bhangrascape.ca}{bhangrascape.ca} $|$ \href{https://github.com/bhat0155/bhangraescape}{\small github} \hfill Aug 2025 -- Present
+\begin{itemize}
+    \item Built a production event-management platform with full DevOps ownership: \textbf{Next.js} frontend, \textbf{Node.js/Express} backend, \textbf{PostgreSQL} schema, Vercel and Render deployment.
+    \item Provisioned all cloud infrastructure with \textbf{Terraform} (modular configs, remote state, OIDC CI/CD auth); containerised workloads with \textbf{Docker}; managed CI/CD across \textbf{GitHub Actions} and cloud platforms.
+    \item Architected secure media ingestion via \textbf{AWS S3 presigned URLs}; implemented granular \textbf{RBAC}, \textbf{JWT}, and \textbf{Google OAuth}; managed secrets with \textbf{Azure Key Vault}.
+\end{itemize}
+
+% --- Technical Projects ---
+\section{Technical Projects}
+
+\needspace{5\baselineskip}
+\textbf{XEffect} $|$ \href{https://www.xeffect.ca/app}{\emph{xeffect.ca}} $|$ \href{https://github.com/bhat0155/xeffect}{\small github} \hfill Nov 2025 -- Dec 2025
+\begin{itemize}
+    \item Deployed a full-stack habit tracker (\textbf{React}, \textbf{Node.js/Express}, \textbf{PostgreSQL}) to a live \textbf{Azure Kubernetes Service (AKS)} cluster via custom \textbf{Kubernetes} manifests.
+    \item Wired complete \textbf{Azure Pipelines} CI/CD flow with \textbf{SonarQube} SAST, \textbf{Trivy} container scanning, and \textbf{Argo CD} GitOps delivery; built \textbf{Prometheus} + \textbf{Grafana} dashboards for cluster observability.
+    \item Containerised both tiers with multi-stage \textbf{Docker} builds; configured pod autoscaling, persistent storage, and secrets management.
+\end{itemize}
+
+\vspace{4pt}
+
+\needspace{5\baselineskip}
+\textbf{ReceiptChecker} $|$ \href{https://receiptchecker.ca/}{\emph{receiptchecker.ca}} $|$ \href{https://github.com/bhat0155/receipt-check}{\small github} \hfill Oct 2025 -- Nov 2025
+\begin{itemize}
+    \item Designed and deployed a two-AI pipeline (\textbf{Google Cloud Vision OCR} + \textbf{OpenAI GPT-4o mini}) on \textbf{AWS EC2} with automated \textbf{GitHub Actions} pipelines per service.
+    \item Applied cost-conscious reliability patterns: fail-fast validation, 6-hour cached external feeds, structured error handling across service failures.
+\end{itemize}
+
+\vspace{4pt}
+
+\needspace{5\baselineskip}
+\textbf{Technical Blog} $|$ \href{https://www.ekamblogs.ca}{ekamblogs.ca} \hfill 2024 -- Present
+\begin{itemize}
+    \item Self-published \textbf{19 technical posts} covering \textbf{Terraform/Azure IaC}, \textbf{AKS}, \textbf{Docker/Kubernetes}, \textbf{CI/CD pipelines}, \textbf{Jenkins}, and \textbf{infrastructure automation} (\textasciitilde\textbf{300 monthly readers}).
+\end{itemize}
+
+% --- Education \& Certifications ---
+\section{Education \& Certifications}
+
+\textbf{Algonquin College} \hfill Ottawa, ON \\
+Advanced Diploma, Mobile Application Design \& Development
+\begin{itemize}
+    \item Graduated \textbf{Magna Cum Laude} $|$ GPA: 3.7 / 4.0 \hfill Jan 2024 -- Aug 2025
+\end{itemize}
+\textbf{Microsoft Certified: Azure Fundamentals (AZ-900)} $|$ Microsoft \hfill 2026 \\
+\textbf{Microsoft Certified: Azure Administrator Associate (AZ-104)} $|$ In progress \hfill 2026
+
+% --- Additional Experience ---
+\section{Additional Experience}
+
+\needspace{5\baselineskip}
+\textbf{Technical Support Associate} $|$ Amazon $|$ Gurugram, India \hfill Oct 2020 -- Nov 2022
+\begin{itemize}
+    \item Resolved 1,000+ complex enterprise technical issues at a \textbf{95\% SLA resolution rate}; authored SOPs and runbooks adopted by 10+ new hires.
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{Warehouse Clerk (Co-op)} $|$ The Beer Store $|$ Ottawa, ON \hfill Aug 2023 -- Dec 2023
+\begin{itemize}
+    \item Maintained \textbf{98\% inventory accuracy}; streamlined operations, reducing processing time by \textbf{15\%}.
+\end{itemize}
+
+\end{document}

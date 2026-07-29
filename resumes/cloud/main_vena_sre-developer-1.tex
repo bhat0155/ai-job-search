@@ -1,0 +1,110 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[T1]{fontenc}
+\usepackage[sfdefault]{inter}
+
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+\titleformat{\section}{\large\bfseries\uppercase}{}{0pt}{}[\titlerule]
+\titlespacing{\section}{0pt}{14pt}{6pt}
+\setlist[itemize]{noitemsep, topsep=1pt, parsep=2pt, leftmargin=1.2em, label=--}
+
+\begin{document}
+
+% --- Header ---
+\begin{center}
+    {\LARGE \textbf{Ekam Bhatia}} \\
+    \vspace{2pt}
+    {\normalsize Site Reliability / DevOps Engineer} \\
+    \vspace{4pt}
+    \small
+    \href{mailto:ekamsingh643@gmail.com}{ekamsingh643@gmail.com} $|$
+    (343) 558-8750 $|$ Ottawa, ON $|$
+    \href{https://www.ekamsingh.ca}{ekamsingh.ca} $|$
+    \href{https://www.ekamblogs.ca}{ekamblogs.ca} $|$
+    \href{https://www.linkedin.com/in/ekam-bhatia-335840168}{LinkedIn} $|$
+    \href{https://github.com/bhat0155}{GitHub}
+\end{center}
+
+% --- Summary ---
+\section{Professional Summary}
+Infrastructure-focused engineer with production experience in Terraform IaC, Docker, Kubernetes, AWS, and Azure, combined with a track record of high-stakes operational ownership: 1,000+ incident resolutions at 95\% SLA at Amazon, runbook authoring, and live monitoring via Prometheus and Grafana. Built, deployed, and observed production Kubernetes clusters on AKS; automated delivery with GitHub Actions, Azure Pipelines, and Argo CD GitOps. Holds Microsoft Azure Fundamentals (AZ-900) with AZ-104 in progress; comfortable with incident management, ITIL-style request/problem/change workflows, and root-cause analysis under SLA pressure.
+
+% --- Skills ---
+\section{Technical Skills}
+\begin{itemize}
+    \item \textbf{Cloud Infrastructure:} AWS (EC2, S3, IAM), Microsoft Azure (AKS, App Services, Functions, Storage, Key Vault, RBAC, ACR, VNets, NSGs), Terraform (modules, remote state, OIDC), Ansible (familiar).
+    \item \textbf{Containers \& Orchestration:} Docker (multi-stage builds), Kubernetes (Deployments, Services, Ingress, PVCs, Secrets, ConfigMaps), Helm, Argo CD / GitOps.
+    \item \textbf{Observability \& Reliability:} Prometheus, Grafana, Azure Monitor, Application Insights, Log Analytics, incident response, SLA management, runbook and SOP authoring, root-cause analysis.
+    \item \textbf{CI/CD \& DevOps:} GitHub Actions, Azure DevOps Pipelines, Jenkins, SonarQube, Trivy, build/release automation.
+    \item \textbf{Development:} Node.js, TypeScript, React, Next.js, Express.js, PostgreSQL, Prisma ORM, REST APIs, JWT, Zod.
+    \item \textbf{Automation \& Tools:} Bash scripting, n8n workflow automation, \textbf{Claude Code} (agentic coding workflows), Git.
+\end{itemize}
+
+% --- Technical Experience ---
+\section{Technical Experience}
+
+\textbf{Full-Stack / Cloud Developer (Freelance)} $|$ \href{https://bhangrascape.ca}{bhangrascape.ca} $|$ \href{https://github.com/bhat0155/bhangraescape}{\small github} \hfill Aug 2025 -- Present
+\begin{itemize}
+    \item Provisioned all cloud infrastructure with \textbf{Terraform} (modular configs, remote state) across \textbf{Azure} and \textbf{AWS} environments; containerized workloads with \textbf{Docker} and managed CI/CD across \textbf{Vercel} and \textbf{Render}.
+    \item Engineered an end-to-end event management platform (\textbf{Next.js}, \textbf{Node.js}, \textbf{PostgreSQL}), owning the full lifecycle from schema design to production deployment and incident response.
+    \item Architected secure media ingestion via \textbf{AWS S3 presigned URLs}; implemented secrets management with \textbf{Azure Key Vault} and least-privilege \textbf{IAM} scoping.
+\end{itemize}
+
+% --- Technical Projects ---
+\section{Technical Projects}
+
+\textbf{XEffect} $|$ \href{https://www.xeffect.ca/app}{\emph{xeffect.ca}} $|$ \href{https://github.com/bhat0155/xeffect}{\small github} \hfill Nov 2025 -- Dec 2025
+\begin{itemize}
+    \item Deployed a production \textbf{Kubernetes} cluster on \textbf{AKS} with \textbf{NGINX Ingress}, \textbf{PVC}-backed stateful \textbf{PostgreSQL}, multi-replica \textbf{Deployments} for automated failover, and \textbf{ConfigMaps}/\textbf{Secrets} for environment-scoped configuration.
+    \item Established a \textbf{GitOps} delivery pipeline via \textbf{Azure Pipelines} and \textbf{Argo CD}, continuously reconciling the cluster state from a versioned manifest repository and pushing images from \textbf{ACR} on every code update.
+    \item Configured \textbf{Prometheus} and \textbf{Grafana} for live cluster observability, building dashboards to track pod health, resource utilization, and application availability---mirroring the SLO-based monitoring model used in SRE practice.
+    \item Embedded \textbf{SonarQube} static analysis and \textbf{Trivy} container scanning into the CI pipeline to catch regressions and vulnerabilities before images reached the registry.
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{ReceiptChecker} $|$ \href{https://receiptchecker.ca/}{\emph{receiptchecker.ca}} $|$ \href{https://github.com/bhat0155/receipt-check}{\small github} \hfill Oct 2025 -- Nov 2025
+\begin{itemize}
+    \item Deployed frontend and backend as independent services on \textbf{AWS EC2}; automated build, \texttt{prisma migrate deploy}, and service restart via independent \textbf{GitHub Actions} pipelines per repository.
+    \item Implemented fail-fast validation (bad OCR early-exit before paid LLM call) and a 6-hour cached recall feed to improve reliability and reduce external dependency failure surface.
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{Technical Blog} $|$ \href{https://www.ekamblogs.ca}{ekamblogs.ca} \hfill 2024 -- Present
+\begin{itemize}
+    \item Self-published \textbf{19 posts} on cloud and DevOps topics (\textasciitilde\textbf{300 monthly readers}); coverage spans \textbf{Terraform/Azure IaC} (AKS, ACR, App Service, PostgreSQL Flexible Server, VNet, remote state, OIDC), \textbf{Kubernetes} with \textbf{Prometheus/Grafana}, and \textbf{Jenkins} CI with \textbf{SonarQube/Trivy}.
+\end{itemize}
+
+% --- Education \& Certifications ---
+\section{Education \& Certifications}
+
+\textbf{Algonquin College} $|$ Advanced Diploma in Mobile Application Design and Development \hfill Ottawa, ON
+\begin{itemize}
+    \item Graduated \textbf{Magna Cum Laude} $|$ Cumulative GPA: 3.7 / 4.0 \hfill Jan 2024 -- Aug 2025
+\end{itemize}
+\textbf{Microsoft Certified: Azure Fundamentals (AZ-900)} $|$ Microsoft \hfill 2026 \\
+\textbf{Microsoft Certified: Azure Administrator Associate (AZ-104)} $|$ In progress \hfill 2026
+
+% --- Additional Experience ---
+\section{Additional Experience}
+
+\textbf{Technical Support Associate} $|$ Amazon $|$ Gurugram, India \hfill Oct 2020 -- Nov 2022
+\begin{itemize}
+    \item Resolved \textbf{1,000+} technical incidents at a \textbf{95\% resolution rate} under strict SLA targets; authored \textbf{SOPs and runbooks} adopted org-wide, reducing onboarding time by \textbf{20\%}.
+    \item Conducted systematic root-cause analysis on recurring failure patterns, escalating confirmed defects with complete reproduction steps---directly applicable to SRE incident and problem management workflows.
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{Warehouse Clerk (Co-op)} $|$ The Beer Store $|$ Ottawa, ON \hfill Aug 2023 -- Dec 2023
+\begin{itemize}
+    \item Maintained \textbf{98\% inventory accuracy}; streamlined cross-dock procedures, cutting processing time by \textbf{15\%}.
+\end{itemize}
+
+\end{document}

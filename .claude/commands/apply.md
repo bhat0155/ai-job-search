@@ -277,6 +277,27 @@ After the final clean compile, delete the `.aux`, `.log`, `.out` files (keep the
 
 ---
 
+## Step 5f: File into Resumes Category
+
+Based on the role type determined in Step 1, copy the compiled `.tex` and `.pdf` into the matching category under `resumes/`:
+
+| Role type | Folder |
+|-----------|--------|
+| Full-stack, software developer, web developer, backend, frontend, application developer | `resumes/software/` |
+| Cloud engineer, DevOps, platform engineer, SRE, infrastructure, Azure/AWS/GCP role | `resumes/cloud/` |
+| Technical support, cloud support, IT operations, application support, help desk | `resumes/support/` |
+
+If the role clearly spans two categories (e.g. "Cloud Support Engineer"), pick the primary one based on the posting's emphasis.
+
+```bash
+cp cv/main_<company>_<role>.tex resumes/<category>/main_<company>_<role>.tex
+cp cv/main_<company>_<role>.pdf resumes/<category>/main_<company>_<role>.pdf
+```
+
+Note in Step 6 which category was chosen and why.
+
+---
+
 ## Step 6: Present Final Output
 
 Run the full verification checklist from `CLAUDE.md` now — this is the **only** verification pass in the workflow. Re-read both files once here to verify final state on disk matches your mental model after the Step 4 and Step 5 edits.
@@ -293,8 +314,9 @@ Summarize 3-5 key decisions made to tailor the application:
 
 ### Files Created
 List the files written:
-- `cv/main_<company>_<role>.tex`
+- `cv/main_<company>_<role>.tex` + `.pdf`
 - `cover_letters/cover_<company>_<role>.tex`
+- `resumes/<category>/main_<company>_<role>.tex` + `.pdf` (category: software / cloud / support)
 
 Tell the user: "Both files are ready for your review. Open them to check the final output before compiling."
 

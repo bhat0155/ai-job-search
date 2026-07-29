@@ -1,0 +1,115 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[T1]{fontenc}
+\usepackage[sfdefault]{inter}
+\usepackage{needspace}
+
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+\titleformat{\section}{\large\bfseries\uppercase}{}{0pt}{}[\titlerule]
+\titlespacing{\section}{0pt}{14pt}{6pt}
+\setlist[itemize]{noitemsep, topsep=1pt, parsep=2pt, leftmargin=1.2em, label=--}
+
+\begin{document}
+
+% --- Header ---
+\begin{center}
+    {\LARGE \textbf{Ekam Bhatia}} \\
+    \vspace{2pt}
+    {\normalsize Software Engineer} \\
+    \vspace{4pt}
+    \small
+    \href{mailto:ekamsingh643@gmail.com}{ekamsingh643@gmail.com} $|$
+    (343) 558-8750 $|$ Ottawa, ON $|$
+    \href{https://www.ekamsingh.ca}{ekamsingh.ca} $|$
+    \href{https://www.ekamblogs.ca}{ekamblogs.ca} $|$
+    \href{https://www.linkedin.com/in/ekam-bhatia-335840168}{LinkedIn} $|$
+    \href{https://github.com/bhat0155}{GitHub}
+\end{center}
+
+% --- Summary ---
+\section{Professional Summary}
+Software engineer who takes end-to-end ownership of production systems: designing APIs, owning database schema, wiring CI/CD pipelines, and monitoring live deployments. Built and operates multiple production platforms independently for real users, with a strong grounding in TypeScript, Node.js, and React alongside cloud infrastructure. Approaches new languages and stacks through building — self-directed learner who writes about what they build to make knowledge transferable to the next engineer.
+
+% --- Skills ---
+\section{Technical Skills}
+\begin{itemize}
+    \item \textbf{Languages:} TypeScript, JavaScript (ES6+), Node.js, C\# (familiar), SQL, Bash.
+    \item \textbf{Frontend \& APIs:} React, Next.js, REST API design, GraphQL (familiar), Tailwind CSS, Zod validation.
+    \item \textbf{Databases \& Auth:} PostgreSQL, Prisma ORM, MongoDB (familiar), Redis (familiar), JWT, Google OAuth 2.0, RBAC.
+    \item \textbf{Cloud \& Infrastructure:} Microsoft Azure (AKS, App Services, Functions, Key Vault, VNets, ACR), AWS (S3, EC2), Terraform (modules, remote state).
+    \item \textbf{DevOps \& Quality:} Docker, Kubernetes, GitHub Actions, Azure Pipelines, Argo CD (GitOps), Jenkins, SonarQube, Trivy.
+    \item \textbf{Observability \& AI Tooling:} Prometheus, Grafana, Azure Monitor, Application Insights, \textbf{Claude Code} (agentic development workflows), n8n automation.
+\end{itemize}
+
+% --- Technical Experience ---
+\section{Technical Experience}
+
+\needspace{5\baselineskip}
+\textbf{Full-Stack Developer (Freelance)} $|$ \href{https://bhangrascape.ca}{bhangrascape.ca} $|$ \href{https://github.com/bhat0155/bhangraescape}{\small github} \hfill Aug 2025 -- Present
+\begin{itemize}
+    \item Took complete ownership of a production event-management platform serving a 20+ member community: \textbf{Next.js} frontend, \textbf{Node.js / Express} backend, \textbf{PostgreSQL} schema, and live \textbf{CI/CD} pipelines — from initial design through production deployment.
+    \item Implemented layered authentication combining \textbf{JWT}, \textbf{Google OAuth}, and granular \textbf{RBAC}, with \textbf{Zod} runtime validation on all API inputs; architected secure media ingestion via \textbf{AWS S3 presigned URLs} to offload file traffic from core API servers.
+    \item Provisioned all cloud infrastructure with \textbf{Terraform} (modular configs, remote state, OIDC auth); containerised workloads with \textbf{Docker}; managed production releases across \textbf{Vercel} and \textbf{Render}.
+\end{itemize}
+
+% --- Technical Projects ---
+\section{Technical Projects}
+
+\needspace{5\baselineskip}
+\textbf{XEffect} $|$ \href{https://www.xeffect.ca/app}{\emph{xeffect.ca}} $|$ \href{https://github.com/bhat0155/xeffect}{\small github} \hfill Nov 2025 -- Dec 2025
+\begin{itemize}
+    \item Built a full production-quality habit tracker (\textbf{React}, \textbf{Node.js/Express}, \textbf{PostgreSQL}, \textbf{Prisma ORM}) with \textbf{Passport.js} + \textbf{JWT} auth and an \textbf{OpenAI} integration with graceful API-failure degradation.
+    \item Containerised both tiers with multi-stage \textbf{Docker} builds and deployed to a live \textbf{AKS} cluster via custom \textbf{Kubernetes} manifests (Deployments, Services, Ingress, PVCs, ConfigMaps) with full \textbf{Argo CD} GitOps delivery.
+    \item Embedded \textbf{SonarQube} SAST and \textbf{Trivy} container scanning into the \textbf{Azure Pipelines} CI flow; set up \textbf{Prometheus} + \textbf{Grafana} dashboards for live pod health and API latency visibility.
+\end{itemize}
+
+\vspace{4pt}
+
+\needspace{5\baselineskip}
+\textbf{ReceiptChecker} $|$ \href{https://receiptchecker.ca/}{\emph{receiptchecker.ca}} $|$ \href{https://github.com/bhat0155/receipt-check}{\small github} \hfill Oct 2025 -- Nov 2025
+\begin{itemize}
+    \item Designed a two-AI pipeline (\textbf{Google Cloud Vision OCR} + \textbf{OpenAI GPT-4o mini}) to parse grocery receipts and semantically match items against live \textbf{Health Canada} food recall data — solving a fuzzy-matching problem that string comparison cannot handle.
+    \item Applied cost-conscious reliability patterns: fail-fast OCR validation before any paid LLM call, a 6-hour cached external feed, and structured error handling across both AI failure modes; deployed on \textbf{AWS EC2} with independent \textbf{GitHub Actions} pipelines per service.
+\end{itemize}
+
+\vspace{4pt}
+
+\needspace{5\baselineskip}
+\textbf{Technical Blog} $|$ \href{https://www.ekamblogs.ca}{ekamblogs.ca} \hfill 2024 -- Present
+\begin{itemize}
+    \item Self-published \textbf{19 technical posts} covering \textbf{Terraform/Azure IaC}, \textbf{AKS}, \textbf{Docker/Kubernetes}, \textbf{CI/CD pipelines}, and \textbf{Prometheus/Grafana} (\textasciitilde\textbf{300 monthly readers}); writing is structured as repeatable runbooks for the next engineer, not personal notes.
+\end{itemize}
+
+% --- Education \& Certifications ---
+\section{Education \& Certifications}
+
+\textbf{Algonquin College} \hfill Ottawa, ON \\
+Advanced Diploma, Mobile Application Design \& Development
+\begin{itemize}
+    \item Graduated \textbf{Magna Cum Laude} $|$ GPA: 3.7 / 4.0 \hfill Jan 2024 -- Aug 2025
+\end{itemize}
+\textbf{Microsoft Certified: Azure Fundamentals (AZ-900)} $|$ Microsoft \hfill 2026 \\
+\textbf{Microsoft Certified: Azure Administrator Associate (AZ-104)} $|$ In progress \hfill 2026
+
+% --- Additional Experience ---
+\section{Additional Experience}
+
+\needspace{5\baselineskip}
+\textbf{Technical Support Associate} $|$ Amazon $|$ Gurugram, India \hfill Oct 2020 -- Nov 2022
+\begin{itemize}
+    \item Resolved \textbf{1,000+} complex enterprise technical issues under strict SLAs at a \textbf{95\% resolution rate}; authored SOPs and runbooks adopted by 10+ new hires, reducing onboarding time by \textbf{20\%}.
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{Warehouse Clerk (Co-op)} $|$ The Beer Store $|$ Ottawa, ON \hfill Aug 2023 -- Dec 2023
+\begin{itemize}
+    \item Maintained \textbf{98\% inventory accuracy}; streamlined cross-dock processing, reducing time by \textbf{15\%}.
+\end{itemize}
+
+\end{document}

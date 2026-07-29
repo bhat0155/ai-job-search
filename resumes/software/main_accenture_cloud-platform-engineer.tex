@@ -1,0 +1,106 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[T1]{fontenc}
+\usepackage[sfdefault]{inter}
+\usepackage{needspace}
+
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+\titleformat{\section}{\large\bfseries\uppercase}{}{0pt}{}[\titlerule]
+\titlespacing{\section}{0pt}{14pt}{6pt}
+\setlist[itemize]{noitemsep, topsep=1pt, parsep=2pt, leftmargin=1.2em, label=--}
+
+\begin{document}
+
+% --- Header ---
+\begin{center}
+    {\LARGE \textbf{Ekam Bhatia}} \\
+    \vspace{2pt}
+    {\normalsize Cloud Platform Engineer \& Infrastructure Specialist } \\
+    \vspace{4pt}
+    \small
+    \href{mailto:ekamsingh643@gmail.com}{ekamsingh643@gmail.com} $|$
+    (343) 558-8750 $|$ Ottawa, ON $|$
+    \href{https://www.ekamsingh.ca}{ekamsingh.ca} $|$
+    \href{https://www.ekamblogs.ca}{ekamblogs.ca} $|$
+    \href{https://www.linkedin.com/in/ekam-bhatia-335840168}{LinkedIn} $|$
+    \href{https://github.com/bhat0155}{GitHub}
+\end{center}
+
+% --- Summary ---
+\section{Professional Summary}
+Cloud platform engineer with deep infrastructure-as-code (Terraform, Kubernetes) and incident response expertise. Architect and operate production Kubernetes platforms on Azure and AWS, designing for reliability, security, and cost efficiency. Combine hands-on platform engineering with infrastructure automation discipline—writing reusable Terraform modules, implementing cloud-native patterns, and mentoring through documentation. Proven incident response and reliability thinking: 95\% SLA resolution rate at Amazon; lead incident retrospectives and drive reliability backlogs in production systems. Comfortable with shift work, on-call responsibilities, and high-security operational environments. Ready to partner with architecture and security teams to scale platform consumption across organizations.
+
+% --- Skills ---
+\section{Technical Skills}
+\begin{itemize}
+    \item \textbf{Infrastructure-as-Code:} Terraform (modules, remote state, OIDC CI/CD auth, drift detection), Ansible (familiar), infrastructure automation best practices.
+    \item \textbf{Kubernetes \& Container Orchestration:} Kubernetes operations (control plane management, node OS baselines, CNI, ingress/egress, registry, RBAC), Azure Kubernetes Service (AKS), custom manifests, GitOps delivery (Argo CD), pod security, persistent storage.
+    \item \textbf{Cloud Platforms:} Azure (primary: App Service, AKS, VNet, Bastion, Key Vault, Azure SQL, Azure Policy, RBAC), AWS (S3, EC2, Lambda, IAM), GCP (Google Cloud Vision, Cloud Functions).
+    \item \textbf{Networking \& Security:} Network design patterns, VNet/subnet design, firewall rules, DNS troubleshooting, RBAC, Key Vault/secret management, identity and access management, security policy automation.
+    \item \textbf{Reliability \& Observability:} SLO/SLA definition, incident response leadership, root cause analysis, observability tooling (Prometheus, Grafana, Azure Monitor), structured logging, alerting strategies, FinOps cost optimization patterns.
+    \item \textbf{CI/CD \& DevOps:} GitHub Actions, Azure Pipelines, Jenkins (familiar), automated testing, code scanning (SonarQube, Trivy), deployment automation, release orchestration.
+    \item \textbf{Languages \& Automation:} Bash, Python (familiar), TypeScript/Node.js, SQL; scripting for infrastructure automation and operational tasks.
+    \item \textbf{Compliance \& Governance:} RBAC design, security policy implementation, infrastructure compliance, secrets management, audit logging.
+\end{itemize}
+
+% --- Technical Experience ---
+\section{Technical Experience}
+
+\needspace{5\baselineskip}
+\textbf{Full-Stack Developer (Freelance)} $|$ \href{https://bhangrascape.ca}{bhangrascape.ca} $|$ \href{https://github.com/bhat0155/bhangraescape}{\small github} \hfill Aug 2025 -- Present
+\begin{itemize}
+    \item Built and deployed production event-management platform (\textbf{Next.js}, \textbf{Node.js/Express}, \textbf{PostgreSQL}) serving 20+ users; owned end-to-end from requirements through deployment and monitoring.
+    \item Designed REST APIs with secure authentication (\textbf{JWT}, \textbf{Google OAuth}), granular \textbf{RBAC}, and database schema management; leveraged \textbf{GitHub Actions} for automated CI/CD.
+    \item Architected secure media ingestion via \textbf{AWS S3} presigned URLs, offloading file handling from the API server; deployed frontend to \textbf{Vercel} and backend to \textbf{Render} for reliable production availability.
+    \item Implemented comprehensive testing, code quality gates, and observability; wrote documentation for team onboarding and maintenance.
+\end{itemize}
+
+% --- Technical Projects ---
+\section{Technical Projects}
+
+\needspace{5\baselineskip}
+\textbf{XEffect — Production Kubernetes Platform} $|$ \href{https://www.xeffect.ca/app}{\emph{xeffect.ca}} $|$ \href{https://github.com/bhat0155/xeffect}{\small github} \hfill Nov 2025 -- Dec 2025
+\begin{itemize}
+    \item Deployed full-stack application to \textbf{Azure Kubernetes Service (AKS)}: wrote custom Kubernetes manifests for NGINX ingress, PostgreSQL StatefulSet with persistent storage, application deployments with health checks and resource requests.
+    \item Provisioned AKS cluster infrastructure with \textbf{Terraform}: VNet, subnet, AKS cluster, managed identity, RBAC roles, storage accounts, container registry. Implemented \textbf{GitOps} delivery via \textbf{Argo CD} for declarative, automated deployments.
+    \item Wired \textbf{Azure Pipelines} CI with automated testing, \textbf{SonarQube} SAST scanning, \textbf{Trivy} container scanning, and automated deployment to AKS. Enforced code quality gates before production.
+    \item Implemented observability stack: \textbf{Prometheus} metrics, \textbf{Grafana} dashboards for pod health, latency, error rates; structured logging; alerting on SLO thresholds. Demonstrated platform reliability and operational maturity.
+\end{itemize}
+
+\vspace{4pt}
+
+\needspace{5\baselineskip}
+\textbf{Technical Blog — Infrastructure \& Platform Engineering} $|$ \href{https://www.ekamblogs.ca}{ekamblogs.ca} \hfill 2024 -- Present
+\begin{itemize}
+    \item Published \textbf{19 technical posts} on infrastructure automation, Kubernetes, Docker, Terraform/IaC, Azure, CI/CD, and platform operations (\textasciitilde\textbf{300 monthly readers}).
+    \item Documented complex infrastructure patterns, operational playbooks, and lessons learned; demonstrated ability to communicate technical decisions clearly for team knowledge transfer and organizational learning.
+\end{itemize}
+
+% --- Education \& Certifications ---
+\section{Education \& Certifications}
+
+\textbf{Algonquin College} \hfill Ottawa, ON \\
+Advanced Diploma, Mobile Application Design \& Development
+\begin{itemize}
+    \item Graduated \textbf{Magna Cum Laude} $|$ GPA: 3.7 / 4.0 \hfill Jan 2024 -- Aug 2025
+\end{itemize}
+\textbf{Microsoft Certified: Azure Fundamentals (AZ-900)} $|$ Microsoft \hfill 2026 \\
+\textbf{Microsoft Certified: Azure Administrator Associate (AZ-104)} $|$ In progress \hfill 2026
+
+% --- Additional Experience ---
+\section{Additional Experience}
+
+\needspace{5\baselineskip}
+\textbf{Technical Support Associate} $|$ Amazon \hfill Oct 2020 -- Nov 2022
+\begin{itemize}
+    \item Resolved 1,000+ complex enterprise technical issues at \textbf{95\% SLA resolution rate} under strict service level agreements; developed strong incident response discipline and root cause analysis skills.
+    \item Authored technical SOPs and runbooks adopted by 10+ new hires; demonstrated ability to document and scale operational knowledge.
+    \item Gained exposure to enterprise infrastructure, production troubleshooting, and the operational rigor required to support mission-critical systems at scale.
+\end{itemize}
+
+\end{document}

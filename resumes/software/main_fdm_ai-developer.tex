@@ -1,0 +1,112 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[T1]{fontenc}
+\usepackage[sfdefault]{inter}
+\usepackage{needspace}
+
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+\titleformat{\section}{\large\bfseries\uppercase}{}{0pt}{}[\titlerule]
+\titlespacing{\section}{0pt}{14pt}{6pt}
+\setlist[itemize]{noitemsep, topsep=1pt, parsep=2pt, leftmargin=1.2em, label=--}
+
+\begin{document}
+
+% --- Header ---
+\begin{center}
+    {\LARGE \textbf{Ekam Bhatia}} \\
+    \vspace{2pt}
+    {\normalsize AI Engineer \& Full-Stack Developer } \\
+    \vspace{4pt}
+    \small
+    \href{mailto:ekamsingh643@gmail.com}{ekamsingh643@gmail.com} $|$
+    (343) 558-8750 $|$ Ottawa, ON $|$
+    \href{https://www.ekamsingh.ca}{ekamsingh.ca} $|$
+    \href{https://www.ekamblogs.ca}{ekamblogs.ca} $|$
+    \href{https://www.linkedin.com/in/ekam-bhatia-335840168}{LinkedIn} $|$
+    \href{https://github.com/bhat0155}{GitHub}
+\end{center}
+
+% --- Summary ---
+\section{Professional Summary}
+Engineer with demonstrated expertise designing and deploying AI-powered applications that solve real business problems. Specialized in integrating generative AI frameworks (Google Cloud Vision, OpenAI) with scalable backend systems, data pipelines, and cloud infrastructure (AWS, PostgreSQL). Combines strong problem-solving and analytical thinking with production systems discipline. Proven learner: builds complex systems end-to-end by learning required technologies in production contexts. Passionate about applying AI to automate workflows, improve decision-making, and deliver measurable business impact.
+
+% --- Skills ---
+\section{Technical Skills}
+\begin{itemize}
+    \item \textbf{AI \& ML:} Google Cloud Vision OCR, OpenAI API integration, LLM-based applications, generative AI frameworks, data-driven decision-making, cost-conscious ML patterns.
+    \item \textbf{Languages:} TypeScript, JavaScript (ES6+), Node.js, Python (familiar), SQL, Bash.
+    \item \textbf{Full-Stack:} React, Next.js, Express.js, REST API design, PostgreSQL, Prisma ORM, relational data modeling.
+    \item \textbf{Data \& Analytics:} Data pipeline design, ETL patterns, relational databases, schema optimization, structured data processing, external data integration.
+    \item \textbf{Cloud \& Infrastructure:} AWS (S3, EC2, Lambda), Azure, Docker, Kubernetes, GitHub Actions, CI/CD automation.
+    \item \textbf{Problem-Solving:} Analytical thinking, algorithmic problem-solving, debugging complex systems, root-cause analysis, data-driven optimization.
+    \item \textbf{Communication:} Technical documentation, clear communication of complex concepts, mentoring, technical writing (19-post published blog).
+\end{itemize}
+
+% --- Technical Experience ---
+\section{Technical Experience}
+
+\needspace{5\baselineskip}
+\textbf{Full-Stack Developer (Freelance)} $|$ \href{https://bhangrascape.ca}{bhangrascape.ca} $|$ \href{https://github.com/bhat0155/bhangraescape}{\small github} \hfill Aug 2025 -- Present
+\begin{itemize}
+    \item Built a production event-management platform (\textbf{Next.js}, \textbf{Node.js/Express}, \textbf{PostgreSQL}) serving 20+ users; architected end-to-end system from requirements through deployment and monitoring.
+    \item Designed REST APIs with \textbf{Prisma ORM}, secure authentication (\textbf{JWT}, \textbf{Google OAuth}), and role-based access control; owned database schema design and migrations.
+    \item Deployed production infrastructure on AWS with \textbf{GitHub Actions} CI/CD automation; embedded code quality gates and observability.
+\end{itemize}
+
+% --- Technical Projects ---
+\section{Technical Projects}
+
+\needspace{5\baselineskip}
+\textbf{ReceiptChecker — AI Data Pipeline} $|$ \href{https://receiptchecker.ca/}{\emph{receiptchecker.ca}} $|$ \href{https://github.com/bhat0155/receipt-check}{\small github} \hfill Oct 2025 -- Nov 2025
+\begin{itemize}
+    \item Architected and deployed a production two-AI data pipeline integrating \textbf{Google Cloud Vision OCR} and \textbf{OpenAI GPT-4o mini} to parse product images and match against live external health data feeds.
+    \item Designed scalable backend system (\textbf{Node.js/Express}, \textbf{PostgreSQL}) for AI pipeline state management; integrated multiple third-party data sources and APIs.
+    \item Applied cost-conscious ML reliability patterns: fail-fast validation before paid LLM calls, 6-hour cached external feeds, structured error handling, defensive data processing—demonstrating problem-solving in production AI systems.
+    \item Deployed on \textbf{AWS EC2} with independent \textbf{GitHub Actions} CI/CD pipelines and monitoring; produced insights from unstructured healthcare data at scale.
+\end{itemize}
+
+\vspace{4pt}
+
+\needspace{5\baselineskip}
+\textbf{XEffect — Full-Stack AI Application} $|$ \href{https://www.xeffect.ca/app}{\emph{xeffect.ca}} $|$ \href{https://github.com/bhat0155/xeffect}{\small github} \hfill Nov 2025 -- Dec 2025
+\begin{itemize}
+    \item Deployed full-stack habit-tracking application (\textbf{React}, \textbf{Node.js/Express}, \textbf{PostgreSQL}) with \textbf{OpenAI API} integration for personalized motivation messages.
+    \item Implemented comprehensive automated test coverage (\textbf{Jest}), code quality gates (\textbf{SonarQube}), and peer code reviews; demonstrated production discipline and analytical problem-solving.
+    \item Engineered secure data persistence layer and authentication; practiced observability and monitoring for production systems.
+\end{itemize}
+
+\vspace{4pt}
+
+\needspace{5\baselineskip}
+\textbf{Technical Blog — Data \& AI Engineering} $|$ \href{https://www.ekamblogs.ca}{ekamblogs.ca} \hfill 2024 -- Present
+\begin{itemize}
+    \item Self-published \textbf{19 technical posts} on infrastructure, DevOps, and software engineering (\textasciitilde\textbf{300 monthly readers}); demonstrates analytical communication and teaching ability.
+    \item Focus: data pipelines, cloud infrastructure (Terraform, AWS, Kubernetes), CI/CD automation, production operations—core to AI Developer and Data Engineer roles.
+\end{itemize}
+
+% --- Education \& Certifications ---
+\section{Education \& Certifications}
+
+\textbf{Algonquin College} \hfill Ottawa, ON \\
+Advanced Diploma, Mobile Application Design \& Development
+\begin{itemize}
+    \item Graduated \textbf{Magna Cum Laude} $|$ GPA: 3.7 / 4.0 \hfill Jan 2024 -- Aug 2025
+\end{itemize}
+\textbf{Microsoft Certified: Azure Fundamentals (AZ-900)} $|$ Microsoft \hfill 2026
+
+% --- Additional Experience ---
+\section{Additional Experience}
+
+\needspace{5\baselineskip}
+\textbf{Technical Support Associate} $|$ Amazon $|$ Gurugram, India \hfill Oct 2020 -- Nov 2022
+\begin{itemize}
+    \item Resolved 1,000+ complex technical issues at \textbf{95\% SLA resolution rate}; authored SOPs and runbooks adopted by 10+ new hires.
+    \item Developed strong analytical and problem-solving discipline; learned production systems thinking and root-cause analysis in high-volume environment.
+\end{itemize}
+
+\end{document}

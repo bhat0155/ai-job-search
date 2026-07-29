@@ -1,0 +1,109 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[T1]{fontenc}
+\usepackage[sfdefault]{inter}
+
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+\titleformat{\section}{\large\bfseries\uppercase}{}{0pt}{}[\titlerule]
+\titlespacing{\section}{0pt}{14pt}{6pt}
+\setlist[itemize]{noitemsep, topsep=1pt, parsep=2pt, leftmargin=1.2em, label=--}
+
+\begin{document}
+
+% --- Header ---
+\begin{center}
+    {\LARGE \textbf{Ekam Bhatia}} \\
+    \vspace{2pt}
+    {\normalsize Technical Support Engineer} \\
+    \vspace{4pt}
+    \small
+    \href{mailto:ekamsingh643@gmail.com}{ekamsingh643@gmail.com} $|$
+    (343) 558-8750 $|$ Ottawa, ON $|$
+    \href{https://www.ekamsingh.ca}{ekamsingh.ca} $|$
+    \href{https://www.ekamblogs.ca}{ekamblogs.ca} $|$
+    \href{https://www.linkedin.com/in/ekam-bhatia-335840168}{LinkedIn} $|$
+    \href{https://github.com/bhat0155}{GitHub}
+\end{center}
+
+% --- Summary ---
+\section{Professional Summary}
+Methodical technical support engineer with a demonstrated track record of resolving 1,000+ complex issues at a 95\% SLA rate and authoring SOPs adopted across 10+ new hires at Amazon. Combines deep troubleshooting discipline and strong written/verbal communication with hands-on cloud and full-stack development skills. Builds and operates production infrastructure using Linux-based environments, Docker, Kubernetes, and Azure---the same platforms underpinning modern network management software. Eager to apply this support-engineer mindset to diagnosing and resolving Nokia NSP platform issues for enterprise customers.
+
+% --- Skills ---
+\section{Technical Skills}
+\begin{itemize}
+    \item \textbf{Troubleshooting \& Support:} Systematic root-cause analysis, SLA management, escalation handling, runbook and SOP authoring, log analysis, ticket lifecycle ownership.
+    \item \textbf{Linux \& Networking:} Linux CLI (log inspection, process/memory/disk checks), TCP/IP fundamentals, REST API debugging, structured troubleshooting methodology.
+    \item \textbf{Cloud \& Infrastructure:} Microsoft Azure (AKS, App Services, Key Vault, RBAC, Monitor), AWS (S3, EC2), Terraform, Docker, Kubernetes, Helm.
+    \item \textbf{DevOps \& Observability:} GitHub Actions, Azure DevOps, Argo CD, Prometheus, Grafana, Application Insights, Log Analytics, Azure Monitor.
+    \item \textbf{Development:} Node.js, Express.js, TypeScript, React, Next.js, PostgreSQL, Prisma ORM, JWT, REST APIs.
+    \item \textbf{Tools:} Git, GitHub, Jira-style ticket queues, \textbf{Claude Code} (agentic development workflows), n8n automation.
+\end{itemize}
+
+% --- Professional Experience ---
+\section{Professional Experience}
+
+\textbf{Technical Support Associate} $|$ Amazon $|$ Gurugram, India \hfill Oct 2020 -- Nov 2022
+\begin{itemize}
+    \item Resolved \textbf{1,000+} complex technical and operational issues end-to-end, achieving a \textbf{95\% resolution rate} under strict SLA performance targets across a high-volume enterprise support queue.
+    \item Conducted systematic root-cause analysis to isolate recurring failure patterns, escalating confirmed software defects to engineering teams with full reproduction steps and supporting log data.
+    \item Authored internal \textbf{SOP and runbook} reference materials adopted by 10+ new hires, reducing onboarding time by \textbf{20\%} and standardising response procedures across the team.
+    \item Maintained clear, timely customer communication throughout active ticket lifecycle, providing regular status updates and managing expectations during complex multi-day resolutions.
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{Full-Stack / Cloud Developer (Freelance)} $|$ \href{https://bhangrascape.ca}{bhangrascape.ca} $|$ \href{https://github.com/bhat0155/bhangraescape}{\small github} \hfill Aug 2025 -- Present
+\begin{itemize}
+    \item Engineered and deployed a production event management platform (\textbf{Next.js}, \textbf{Node.js}, \textbf{PostgreSQL}) end-to-end, owning application, infrastructure, and CI/CD across \textbf{Azure} and \textbf{AWS} environments.
+    \item Provisioned all infrastructure with \textbf{Terraform} and containerized workloads using \textbf{Docker}; implemented secure authentication with \textbf{JWT}, \textbf{Google OAuth}, and \textbf{RBAC}.
+\end{itemize}
+
+% --- Technical Projects ---
+\section{Technical Projects}
+
+\textbf{XEffect} $|$ \href{https://www.xeffect.ca/app}{\emph{xeffect.ca}} $|$ \href{https://github.com/bhat0155/xeffect}{\small github} \hfill Nov 2025 -- Dec 2025
+\begin{itemize}
+    \item Deployed a production \textbf{Kubernetes} cluster on \textbf{AKS} with \textbf{NGINX Ingress}, \textbf{ConfigMaps}, \textbf{Secrets}, and a \textbf{PVC}-backed stateful \textbf{PostgreSQL} workload; configured \textbf{Prometheus} and \textbf{Grafana} for live cluster health monitoring.
+    \item Established an automated \textbf{GitOps} pipeline via \textbf{Azure Pipelines} and \textbf{Argo CD}, reproducing issues in a versioned environment and validating fixes before production rollout.
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{ReceiptChecker} $|$ \href{https://receiptchecker.ca/}{\emph{receiptchecker.ca}} $|$ \href{https://github.com/bhat0155/receipt-check}{\small github} \hfill Oct 2025 -- Nov 2025
+\begin{itemize}
+    \item Built a two-AI pipeline (\textbf{Google Cloud Vision OCR} + \textbf{OpenAI GPT-4o mini}) deployed on \textbf{AWS EC2} with fail-fast validation; diagnosed and resolved production edge cases through systematic log analysis and API response inspection.
+    \item Automated build and deployment via independent \textbf{GitHub Actions} pipelines; implemented a 6-hour cached recall feed to reduce external API dependency and improve reliability.
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{Technical Blog} $|$ \href{https://www.ekamblogs.ca}{ekamblogs.ca} \hfill 2024 -- Present
+\begin{itemize}
+    \item Self-published \textbf{19 posts} on cloud infrastructure and DevOps, averaging \textasciitilde\textbf{300 monthly readers}; topics include \textbf{Terraform/Azure IaC}, \textbf{Kubernetes/Prometheus/Grafana}, and \textbf{Jenkins} CI with \textbf{SonarQube} and \textbf{Trivy}.
+\end{itemize}
+
+% --- Education \& Certifications ---
+\section{Education \& Certifications}
+
+\textbf{Algonquin College} $|$ Advanced Diploma in Mobile Application Design and Development \hfill Ottawa, ON
+\begin{itemize}
+    \item Graduated \textbf{Magna Cum Laude} $|$ Cumulative GPA: 3.7 / 4.0 \hfill Jan 2024 -- Aug 2025
+\end{itemize}
+\textbf{Microsoft Certified: Azure Fundamentals (AZ-900)} $|$ Microsoft \hfill 2026 \\
+\textbf{Microsoft Certified: Azure Administrator Associate (AZ-104)} $|$ In progress \hfill 2026
+
+% --- Additional Experience ---
+\section{Additional Experience}
+
+\textbf{Warehouse Clerk (Co-op)} $|$ The Beer Store $|$ Ottawa, ON \hfill Aug 2023 -- Dec 2023
+\begin{itemize}
+    \item Maintained \textbf{98\% inventory accuracy}; streamlined cross-dock processing, reducing processing time by \textbf{15\%}.
+\end{itemize}
+
+\end{document}

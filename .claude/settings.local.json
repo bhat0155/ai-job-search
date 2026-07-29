@@ -32,7 +32,10 @@
       "Bash(/Library/TeX/texbin/lualatex -interaction=nonstopmode main_scotiabank_software-developer.tex)",
       "Bash(/Library/TeX/texbin/lualatex -interaction=nonstopmode main_carelynk_fullstack.tex)",
       "Bash(/Library/TeX/texbin/lualatex -interaction=nonstopmode main_trusscore_fullstack.tex)",
-      "Bash(/Library/TeX/texbin/lualatex -interaction=nonstopmode main_redwoodsoftware_associate.tex)"
+      "Bash(/Library/TeX/texbin/lualatex -interaction=nonstopmode main_redwoodsoftware_associate.tex)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(f'Total seen jobs: {len\\(d\\)}'\\)\")",
+      "mcp__claude_ai_Gmail__search_threads",
+      "mcp__claude_ai_Gmail__get_thread"
     ]
   }
 }

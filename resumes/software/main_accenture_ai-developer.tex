@@ -1,0 +1,111 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[T1]{fontenc}
+\usepackage[sfdefault]{inter}
+\usepackage{needspace}
+
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+\titleformat{\section}{\large\bfseries\uppercase}{}{0pt}{}[\titlerule]
+\titlespacing{\section}{0pt}{14pt}{6pt}
+\setlist[itemize]{noitemsep, topsep=1pt, parsep=2pt, leftmargin=1.2em, label=--}
+
+\begin{document}
+
+% --- Header ---
+\begin{center}
+    {\LARGE \textbf{Ekam Bhatia}} \\
+    \vspace{2pt}
+    {\normalsize AI-Native Full-Stack Developer } \\
+    \vspace{4pt}
+    \small
+    \href{mailto:ekamsingh643@gmail.com}{ekamsingh643@gmail.com} $|$
+    (343) 558-8750 $|$ Ottawa, ON $|$
+    \href{https://www.ekamsingh.ca}{ekamsingh.ca} $|$
+    \href{https://www.ekamblogs.ca}{ekamblogs.ca} $|$
+    \href{https://www.linkedin.com/in/ekam-bhatia-335840168}{LinkedIn} $|$
+    \href{https://github.com/bhat0155}{GitHub}
+\end{center}
+
+% --- Summary ---
+\section{Professional Summary}
+Full-stack engineer specializing in AI-native software development and spec-driven workflows. Daily user of Claude Code and AI coding agents (GitHub Copilot) for accelerated, production-grade development across the full stack. Architect and deploy scalable, cloud-native applications integrating generative AI frameworks, REST/GraphQL APIs, and modern DevOps practices. Combine deep systems thinking with proven ability to direct AI tools, review generated code with craft and discipline, and ship faster without sacrificing quality. Experienced building production systems on GCP, AWS, and Azure with Kubernetes, Docker, and CI/CD automation.
+
+% --- Skills ---
+\section{Technical Skills}
+\begin{itemize}
+    \item \textbf{AI-Native Development:} Claude Code (daily driver), GitHub Copilot, AI coding agents, spec-driven development, prompt engineering for code generation, AI-augmented testing and refactoring.
+    \item \textbf{Full-Stack:} React, Next.js, Angular patterns, Express.js, REST API design, GraphQL (familiar), TypeScript, JavaScript (ES6+), Node.js.
+    \item \textbf{Backend \& Integrations:} REST API design, GraphQL, microservices patterns, integration architecture, third-party API orchestration, event-driven systems.
+    \item \textbf{Cloud \& DevOps:} GCP (Google Cloud Vision, Cloud Functions), AWS (S3, EC2, Lambda), Azure (App Service, AKS), Kubernetes, Docker, Terraform, CI/CD (GitHub Actions, Azure Pipelines).
+    \item \textbf{Databases \& Data:} PostgreSQL, schema design, Prisma ORM, relational modeling, query optimization, data pipeline design.
+    \item \textbf{Production Practices:} Production monitoring, observability, error handling, structured logging, security (JWT, OAuth, RBAC), code review discipline, SonarQube, testing automation.
+    \item \textbf{Emerging Tech:} Generative AI integration, LLM-based applications, cost-conscious ML patterns, AI-driven workflow automation.
+\end{itemize}
+
+% --- Technical Experience ---
+\section{Technical Experience}
+
+\needspace{5\baselineskip}
+\textbf{Full-Stack AI Developer (Freelance)} $|$ \href{https://bhangrascape.ca}{bhangrascape.ca} $|$ \href{https://github.com/bhat0155/bhangraescape}{\small github} \hfill Aug 2025 -- Present
+\begin{itemize}
+    \item Architected and delivered production event-management platform (\textbf{Next.js}, \textbf{Node.js/Express}, \textbf{PostgreSQL}) serving 20+ users; owned end-to-end from requirements through deployment and monitoring.
+    \item Designed REST APIs with \textbf{Prisma ORM}, secure authentication (\textbf{JWT}, \textbf{Google OAuth}), granular \textbf{RBAC}, and database schema management; leveraged \textbf{Claude Code} for rapid API prototyping and testing.
+    \item Deployed cloud-native architecture on \textbf{AWS} and \textbf{Azure}; containerized with \textbf{Docker}; automated releases via \textbf{GitHub Actions}; embedded observability and monitoring practices.
+\end{itemize}
+
+% --- Technical Projects ---
+\section{Technical Projects}
+
+\needspace{5\baselineskip}
+\textbf{ReceiptChecker — AI-Augmented Data Pipeline} $|$ \href{https://receiptchecker.ca/}{\emph{receiptchecker.ca}} $|$ \href{https://github.com/bhat0155/receipt-check}{\small github} \hfill Oct 2025 -- Nov 2025
+\begin{itemize}
+    \item Built production two-AI system integrating \textbf{Google Cloud Vision OCR} and \textbf{OpenAI GPT-4o mini} to parse product images and match against live external data feeds—demonstrates AI-augmented development at scale.
+    \item Designed full-stack architecture (\textbf{React}, \textbf{Node.js/Express}, \textbf{PostgreSQL}) for reliable AI pipeline state management; orchestrated multiple third-party APIs with structured error handling.
+    \item Leveraged \textbf{Claude Code} for rapid specification-to-implementation cycles: wrote detailed technical specs, directed AI code generation, reviewed and tested output with production discipline.
+    \item Applied cost-conscious ML patterns: fail-fast validation before paid LLM calls, 6-hour cached external feeds, structured error handling. Deployed on \textbf{AWS EC2} with \textbf{GitHub Actions} CI/CD and monitoring.
+\end{itemize}
+
+\vspace{4pt}
+
+\needspace{5\baselineskip}
+\textbf{XEffect — Full-Stack Application with AI Integration} $|$ \href{https://www.xeffect.ca/app}{\emph{xeffect.ca}} $|$ \href{https://github.com/bhat0155/xeffect}{\small github} \hfill Nov 2025 -- Dec 2025
+\begin{itemize}
+    \item Deployed full-stack habit tracker (\textbf{React}, \textbf{Node.js/Express}, \textbf{PostgreSQL}) to \textbf{Azure Kubernetes Service (AKS)} with custom \textbf{Kubernetes} manifests and persistent storage.
+    \item Integrated \textbf{OpenAI API} for personalized motivation; wired \textbf{Azure Pipelines} CI with \textbf{SonarQube} SAST and \textbf{Trivy} scanning; implemented \textbf{Argo CD} GitOps delivery and \textbf{Prometheus} + \textbf{Grafana} observability.
+    \item Wrote comprehensive \textbf{Jest} test suites and conducted peer code reviews; used \textbf{Claude Code} for test generation and refactoring—demonstrating AI-native workflow with rigorous quality gates.
+\end{itemize}
+
+\vspace{4pt}
+
+\needspace{5\baselineskip}
+\textbf{Technical Blog — AI-Native Engineering} $|$ \href{https://www.ekamblogs.ca}{ekamblogs.ca} \hfill 2024 -- Present
+\begin{itemize}
+    \item Published \textbf{19 technical posts} on cloud infrastructure (Terraform, AWS, Azure, Kubernetes), CI/CD automation, and AI-augmented development patterns (\textasciitilde\textbf{300 monthly readers}).
+    \item Recent focus: spec-driven development workflows, using AI coding agents productively, production discipline with AI-generated code—thought leadership aligned with Accenture's AI-native vision.
+\end{itemize}
+
+% --- Education \& Certifications ---
+\section{Education \& Certifications}
+
+\textbf{Algonquin College} \hfill Ottawa, ON \\
+Advanced Diploma, Mobile Application Design \& Development
+\begin{itemize}
+    \item Graduated \textbf{Magna Cum Laude} $|$ GPA: 3.7 / 4.0 \hfill Jan 2024 -- Aug 2025
+\end{itemize}
+\textbf{Microsoft Certified: Azure Fundamentals (AZ-900)} $|$ Microsoft \hfill 2026
+
+% --- Additional Experience ---
+\section{Additional Experience}
+
+\needspace{5\baselineskip}
+\textbf{Technical Support Associate} $|$ Amazon $|$ Gurugram, India \hfill Oct 2020 -- Nov 2022
+\begin{itemize}
+    \item Resolved 1,000+ complex enterprise technical issues at \textbf{95\% SLA resolution rate}; authored SOPs and runbooks adopted by 10+ new hires; developed production systems thinking and incident response discipline.
+\end{itemize}
+
+\end{document}

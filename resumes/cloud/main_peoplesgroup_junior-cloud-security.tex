@@ -1,0 +1,109 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[T1]{fontenc}
+\usepackage[sfdefault]{inter}
+
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+\titleformat{\section}{\large\bfseries\uppercase}{}{0pt}{}[\titlerule]
+\titlespacing{\section}{0pt}{14pt}{6pt}
+\setlist[itemize]{noitemsep, topsep=1pt, parsep=2pt, leftmargin=1.2em, label=--}
+
+\begin{document}
+
+% --- Header ---
+\begin{center}
+    {\LARGE \textbf{Ekam Bhatia}} \\
+    \vspace{2pt}
+    {\normalsize Junior Cloud Security / DevSecOps Engineer} \\
+    \vspace{4pt}
+    \small
+    \href{mailto:ekamsingh643@gmail.com}{ekamsingh643@gmail.com} $|$
+    (343) 558-8750 $|$ Ottawa, ON $|$
+    \href{https://www.ekamsingh.ca}{ekamsingh.ca} $|$
+    \href{https://www.ekamblogs.ca}{ekamblogs.ca} $|$
+    \href{https://www.linkedin.com/in/ekam-bhatia-335840168}{LinkedIn} $|$
+    \href{https://github.com/bhat0155}{GitHub}
+\end{center}
+
+% --- Summary ---
+\section{Professional Summary}
+Cloud and DevOps engineer with hands-on production experience in Azure and AWS infrastructure, Terraform IaC, Docker/Kubernetes, and GitHub Actions CI/CD. Built and shipped secure applications with JWT, Google OAuth, RBAC, and Azure Key Vault secrets management, and integrated static analysis (SonarQube) and container scanning (Trivy) into delivery pipelines. Holds Microsoft Azure Fundamentals (AZ-900) with AZ-104 in progress; actively studying cloud security controls (OWASP Top 10, IAM, network segmentation) and drawn to DevSecOps roles where security is embedded earlier in the software lifecycle.
+
+% --- Skills ---
+\section{Technical Skills}
+\begin{itemize}
+    \item \textbf{Cloud \& Security:} Microsoft Azure (AKS, App Services, Key Vault, RBAC, NSGs, Azure Policy, ACR), AWS (S3 presigned URLs, EC2, IAM), cloud IAM and secrets management, OWASP Top 10 awareness.
+    \item \textbf{DevSecOps \& CI/CD:} Terraform (modules, remote state, OIDC), Docker, Kubernetes, GitHub Actions, Azure DevOps Pipelines, Jenkins, \textbf{SonarQube} (SAST), \textbf{Trivy} (container image scanning), Argo CD.
+    \item \textbf{Security Controls:} JWT authentication, Google OAuth 2.0, role-based access control (RBAC), input validation with Zod, Azure Key Vault integration, least-privilege IAM policies.
+    \item \textbf{Scripting \& Automation:} Bash, Node.js, n8n workflow automation, REST API design and testing.
+    \item \textbf{Development:} TypeScript, React, Next.js, Node.js/Express, PostgreSQL, Prisma ORM, REST APIs.
+    \item \textbf{Observability:} Prometheus, Grafana, Azure Monitor, Application Insights, Log Analytics.
+\end{itemize}
+
+% --- Technical Experience ---
+\section{Technical Experience}
+
+\textbf{Full-Stack / Cloud Developer (Freelance)} $|$ \href{https://bhangrascape.ca}{bhangrascape.ca} $|$ \href{https://github.com/bhat0155/bhangraescape}{\small github} \hfill Aug 2025 -- Present
+\begin{itemize}
+    \item Architected secure media ingestion using \textbf{AWS S3 presigned URLs} and \textbf{IAM} scoped credentials, eliminating direct server-side file handling and reducing the attack surface on core REST APIs.
+    \item Implemented authentication and authorisation stack: \textbf{JWT} token lifecycle, \textbf{Google OAuth 2.0}, granular \textbf{RBAC}, and \textbf{Zod} runtime input validation; managed secrets with \textbf{Azure Key Vault}.
+    \item Provisioned all cloud infrastructure with \textbf{Terraform} (remote state, modular configs); enforced infrastructure drift detection and containerised workloads with \textbf{Docker}.
+    \item Managed CI/CD across \textbf{Vercel} and \textbf{Render}; integrated \textbf{GitHub Actions} pipelines with automated test gates and environment-scoped deployment secrets.
+\end{itemize}
+
+% --- Technical Projects ---
+\section{Technical Projects}
+
+\textbf{XEffect} $|$ \href{https://www.xeffect.ca/app}{\emph{xeffect.ca}} $|$ \href{https://github.com/bhat0155/xeffect}{\small github} \hfill Nov 2025 -- Dec 2025
+\begin{itemize}
+    \item Embedded \textbf{SonarQube} static analysis and \textbf{Trivy} container image scanning into an \textbf{Azure Pipelines} CI/CD workflow, catching vulnerabilities and code-quality regressions before images reached the registry.
+    \item Deployed a production \textbf{Kubernetes} cluster on \textbf{AKS} with \textbf{Secrets}-backed credential injection, \textbf{RBAC}-scoped service accounts, and \textbf{NGINX Ingress} TLS termination.
+    \item Implemented \textbf{Passport.js} + \textbf{JWT} session auth distinct from the OAuth flow in bhangrascape.ca, demonstrating range across authentication patterns and their security trade-offs.
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{ReceiptChecker} $|$ \href{https://receiptchecker.ca/}{\emph{receiptchecker.ca}} $|$ \href{https://github.com/bhat0155/receipt-check}{\small github} \hfill Oct 2025 -- Nov 2025
+\begin{itemize}
+    \item Built a two-AI pipeline on \textbf{AWS EC2} with fail-fast input validation before invoking paid LLM calls; managed API keys via environment-scoped secrets to prevent credential exposure.
+    \item Automated build and deployment via \textbf{GitHub Actions} with separate pipeline configurations per service (frontend / backend), enforcing least-privilege deployment credentials.
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{Technical Blog} $|$ \href{https://www.ekamblogs.ca}{ekamblogs.ca} \hfill 2024 -- Present
+\begin{itemize}
+    \item Self-published \textbf{19 posts} on cloud and DevOps topics (\textasciitilde\textbf{300 monthly readers}); security-related coverage includes \textbf{Azure Policy}, \textbf{Key Vault} integration, \textbf{OIDC-based} CI/CD authentication, \textbf{SonarQube/Trivy} pipeline scanning, and \textbf{Azure networking} (NSGs, VNets, bastion).
+\end{itemize}
+
+% --- Education \& Certifications ---
+\section{Education \& Certifications}
+
+\textbf{Algonquin College} $|$ Advanced Diploma in Mobile Application Design and Development \hfill Ottawa, ON
+\begin{itemize}
+    \item Graduated \textbf{Magna Cum Laude} $|$ Cumulative GPA: 3.7 / 4.0 \hfill Jan 2024 -- Aug 2025
+\end{itemize}
+\textbf{Microsoft Certified: Azure Fundamentals (AZ-900)} $|$ Microsoft \hfill 2026 \\
+\textbf{Microsoft Certified: Azure Administrator Associate (AZ-104)} $|$ In progress \hfill 2026
+
+% --- Additional Experience ---
+\section{Additional Experience}
+
+\textbf{Technical Support Associate} $|$ Amazon $|$ Gurugram, India \hfill Oct 2020 -- Nov 2022
+\begin{itemize}
+    \item Resolved \textbf{1,000+} complex technical issues at a \textbf{95\% resolution rate}; authored SOPs adopted by 10+ new hires, reducing onboarding time by \textbf{20\%}.
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{Warehouse Clerk (Co-op)} $|$ The Beer Store $|$ Ottawa, ON \hfill Aug 2023 -- Dec 2023
+\begin{itemize}
+    \item Maintained \textbf{98\% inventory accuracy}; streamlined cross-dock procedures, cutting processing time by \textbf{15\%}.
+\end{itemize}
+
+\end{document}

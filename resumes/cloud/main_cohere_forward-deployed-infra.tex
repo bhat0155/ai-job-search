@@ -1,0 +1,109 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[T1]{fontenc}
+\usepackage[sfdefault]{inter}
+
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+\titleformat{\section}{\large\bfseries\uppercase}{}{0pt}{}[\titlerule]
+\titlespacing{\section}{0pt}{14pt}{6pt}
+\setlist[itemize]{noitemsep, topsep=1pt, parsep=2pt, leftmargin=1.2em, label=--}
+
+\begin{document}
+
+% --- Header ---
+\begin{center}
+    {\LARGE \textbf{Ekam Bhatia}} \\
+    \vspace{2pt}
+    {\normalsize Forward Deployed Engineer $|$ Cloud Infrastructure \& Agentic AI} \\
+    \vspace{4pt}
+    \small
+    \href{mailto:ekamsingh643@gmail.com}{ekamsingh643@gmail.com} $|$
+    (343) 558-8750 $|$ Ottawa, ON $|$
+    \href{https://www.ekamsingh.ca}{ekamsingh.ca} $|$
+    \href{https://www.ekamblogs.ca}{ekamblogs.ca} $|$
+    \href{https://www.linkedin.com/in/ekam-bhatia-335840168}{LinkedIn} $|$
+    \href{https://github.com/bhat0155}{GitHub}
+\end{center}
+
+% --- Summary ---
+\section{Professional Summary}
+Infrastructure engineer and agentic AI practitioner who ships production Kubernetes clusters, Terraform-managed cloud environments, and Helm-deployed workloads alongside hands-on experience integrating LLM pipelines into real applications. Built and deployed a two-AI production system (Google Cloud Vision + OpenAI GPT-4o mini), and uses \textbf{Claude Code} daily to drive agentic development workflows, model tool use, and multi-step automation. Combines the infrastructure depth needed to deploy Cohere's North platform in private and hybrid cloud environments with the AI-native fluency to engage enterprise engineering teams authentically on what agentic deployment actually looks like in production.
+
+% --- Skills ---
+\section{Technical Skills}
+\begin{itemize}
+    \item \textbf{Kubernetes \& Helm:} AKS cluster operations, Deployments, Services, NGINX Ingress, PVCs, ConfigMaps, Secrets, multi-replica failover, Helm chart deployment and lifecycle management, Argo CD GitOps.
+    \item \textbf{Cloud Infrastructure:} Microsoft Azure (AKS, App Services, Functions, VNets, NSGs, Key Vault, RBAC, ACR, Azure Policy), AWS (S3, EC2, IAM), Terraform (modules, remote state, OIDC auth).
+    \item \textbf{CI/CD \& DevOps:} GitHub Actions, Azure DevOps Pipelines, Jenkins, Argo CD, Docker (multi-stage builds), Azure Container Registry, SonarQube, Trivy.
+    \item \textbf{Agentic AI \& LLMs:} \textbf{Claude Code} (production agentic coding workflows, MCP-based tool orchestration, multi-step task automation), OpenAI GPT-4o mini (production LLM pipeline), n8n workflow automation, Google Cloud Vision (OCR integration), prompt engineering for reliable LLM outputs.
+    \item \textbf{Observability:} Prometheus, Grafana, Azure Monitor, Application Insights, Log Analytics, incident response.
+    \item \textbf{Development:} Node.js, TypeScript, React, Next.js, Express.js, PostgreSQL, Prisma ORM, REST APIs, JWT, Google OAuth, Zod.
+\end{itemize}
+
+% --- Technical Experience ---
+\section{Technical Experience}
+
+\textbf{Full-Stack / Cloud Developer (Freelance)} $|$ \href{https://bhangrascape.ca}{bhangrascape.ca} $|$ \href{https://github.com/bhat0155/bhangraescape}{\small github} \hfill Aug 2025 -- Present
+\begin{itemize}
+    \item Provisioned all cloud infrastructure with \textbf{Terraform} (modular configs, remote state) across \textbf{Azure} and \textbf{AWS}; containerized workloads with \textbf{Docker} and managed full CI/CD lifecycle from code to production.
+    \item Engineered an event management platform (\textbf{Next.js}, \textbf{Node.js}, \textbf{PostgreSQL}) end-to-end, integrating \textbf{JWT}, \textbf{Google OAuth}, \textbf{RBAC}, and \textbf{Azure Key Vault} secrets management for enterprise-grade security posture.
+    \item Used \textbf{Claude Code} throughout the development lifecycle for agentic task automation, multi-file refactoring, and tool-use orchestration---cutting implementation time significantly while maintaining production code quality.
+\end{itemize}
+
+% --- Technical Projects ---
+\section{Technical Projects}
+
+\textbf{XEffect} $|$ \href{https://www.xeffect.ca/app}{\emph{xeffect.ca}} $|$ \href{https://github.com/bhat0155/xeffect}{\small github} \hfill Nov 2025 -- Dec 2025
+\begin{itemize}
+    \item Deployed a production \textbf{Kubernetes} cluster on \textbf{AKS}: provisioned control plane, configured \textbf{NGINX Ingress} with TLS, managed \textbf{PVC}-backed stateful \textbf{PostgreSQL}, and established multi-replica \textbf{Deployments} for automated failover---the same cluster primitives used in private cloud enterprise deployments.
+    \item Built a \textbf{Helm}-managed \textbf{GitOps} delivery pipeline via \textbf{Azure Pipelines} and \textbf{Argo CD}, continuously reconciling the cluster state from versioned manifests---directly analogous to how North would be deployed in customer environments.
+    \item Configured \textbf{Prometheus} and \textbf{Grafana} for live cluster observability; embedded \textbf{SonarQube} and \textbf{Trivy} into the CI pipeline for security scanning before images reached the registry.
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{ReceiptChecker} $|$ \href{https://receiptchecker.ca/}{\emph{receiptchecker.ca}} $|$ \href{https://github.com/bhat0155/receipt-check}{\small github} \hfill Oct 2025 -- Nov 2025
+\begin{itemize}
+    \item Built a production two-AI pipeline integrating \textbf{Google Cloud Vision OCR} and \textbf{OpenAI GPT-4o mini}: receipts are parsed into structured items, then semantically matched against live \textbf{Health Canada} food recall data---a real-world demonstration of LLM reasoning applied to a safety-critical use case.
+    \item Engineered cost-conscious reliability: fail-fast OCR validation before the paid LLM step, 6-hour cached recall feed to reduce external dependency calls, and graceful error handling on both AI service failures---production patterns directly applicable to deploying Cohere models in regulated enterprise environments.
+    \item Deployed on \textbf{AWS EC2} with independent \textbf{GitHub Actions} pipelines; managed API credentials and model keys via environment-scoped secrets.
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{Technical Blog} $|$ \href{https://www.ekamblogs.ca}{ekamblogs.ca} \hfill 2024 -- Present
+\begin{itemize}
+    \item Self-published \textbf{19 posts} on cloud and DevOps topics (\textasciitilde\textbf{300 monthly readers}); coverage includes \textbf{Terraform/Azure IaC} (AKS, ACR, VNet, Azure Policy, OIDC CI/CD), \textbf{Kubernetes/Prometheus/Grafana}, \textbf{Azure networking and security}, and \textbf{n8n} agentic automation.
+\end{itemize}
+
+% --- Education \& Certifications ---
+\section{Education \& Certifications}
+
+\textbf{Algonquin College} $|$ Advanced Diploma in Mobile Application Design and Development \hfill Ottawa, ON
+\begin{itemize}
+    \item Graduated \textbf{Magna Cum Laude} $|$ Cumulative GPA: 3.7 / 4.0 \hfill Jan 2024 -- Aug 2025
+\end{itemize}
+\textbf{Microsoft Certified: Azure Fundamentals (AZ-900)} $|$ Microsoft \hfill 2026 \\
+\textbf{Microsoft Certified: Azure Administrator Associate (AZ-104)} $|$ In progress \hfill 2026
+
+% --- Additional Experience ---
+\section{Additional Experience}
+
+\textbf{Technical Support Associate} $|$ Amazon $|$ Gurugram, India \hfill Oct 2020 -- Nov 2022
+\begin{itemize}
+    \item Resolved \textbf{1,000+} complex enterprise technical issues at a \textbf{95\% SLA resolution rate}; authored \textbf{SOPs and runbooks} adopted by 10+ new hires, reducing onboarding time by \textbf{20\%}.
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{Warehouse Clerk (Co-op)} $|$ The Beer Store $|$ Ottawa, ON \hfill Aug 2023 -- Dec 2023
+\begin{itemize}
+    \item Maintained \textbf{98\% inventory accuracy}; streamlined cross-dock procedures, cutting processing time by \textbf{15\%}.
+\end{itemize}
+
+\end{document}
